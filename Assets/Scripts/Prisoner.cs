@@ -9,11 +9,15 @@ public interface IDragable
     void StartDrag();
     void EndDrag(Vector3 position);
     void EndDrag(Transform toAttachTo);
+    float GetEndDragYOffset();
     bool IsDragable();
 }
 
 public class Prisoner : MonoBehaviour, IDragable
 {
+    [SerializeField] Rigidbody rigidbody;
+    [SerializeField] float YOffsetOnDrop;
+
     Transform defaultParent;
     bool isBeeingDragged = false;
     bool isAttached;
@@ -27,6 +31,8 @@ public class Prisoner : MonoBehaviour, IDragable
     {
         isBeeingDragged = false;
         transform.position = position;
+        transform.rotation = Quaternion.Euler(Quaternion.identity.eulerAngles + new Vector3(9,9));
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotationY;
         gameObject.layer = 0;
     }
     public void EndDrag(Transform toAttachTo)
@@ -44,6 +50,8 @@ public class Prisoner : MonoBehaviour, IDragable
     {
         isBeeingDragged = true;
         gameObject.layer = Physics.IgnoreRaycastLayer;
+        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        transform.rotation = Quaternion.identity;
 
         if (isAttached)
         {
@@ -57,5 +65,8 @@ public class Prisoner : MonoBehaviour, IDragable
         transform.position = position;
     }
 
-    
+    public float GetEndDragYOffset()
+    {
+        return YOffsetOnDrop;
+    }
 }

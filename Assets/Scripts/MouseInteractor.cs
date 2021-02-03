@@ -78,7 +78,7 @@ public class MouseInteractor : MonoBehaviour
     {
         currentAttachable = null;
         currentDrag = null;
-        dragable.EndDrag(point);
+        dragable.EndDrag(point + dragable.GetEndDragYOffset() * Vector3.up);
     }
 
     private void EndDrag(IDragable dragable, Attacher attacher)
