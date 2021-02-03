@@ -9,7 +9,7 @@ public class MouseInteractor : MonoBehaviour
     [SerializeField] LayerMask ignoreRaycast;
 
     IDragable currentDrag;
-    Attachable currentAttachable;
+    IAttachable currentAttachable;
 
     public bool IsDragging { get => (currentDrag != null); }
     public bool IsDraggingAttachable { get => (currentAttachable != null); }
@@ -25,11 +25,11 @@ public class MouseInteractor : MonoBehaviour
                 UpdateDrag(currentDrag, ray.GetPoint(dragDistance));
                 if (Input.GetMouseButtonUp(0))
                 {
-                    Attacher attacher = hit.collider.GetComponent<Attacher>();
+                    IAttacher attacher = hit.collider.GetComponent<IAttacher>();
 
-                    if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable))
+                    if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable.GetAttachment()))
                     {
-                        EndDrag(currentDrag, attacher);
+                        EndDrag(currentAttachable, attacher);
                     }
                     else
                     {
@@ -41,7 +41,7 @@ public class MouseInteractor : MonoBehaviour
             {
                 IDragable dragable = hit.collider.GetComponent<IDragable>();
                 IClickable clickable = hit.collider.GetComponent<IClickable>();
-                Attachable attachable = hit.collider.GetComponent<Attachable>();
+                SimpleAttachable attachable = hit.collider.GetComponent<SimpleAttachable>();
 
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -68,7 +68,7 @@ public class MouseInteractor : MonoBehaviour
         dragable.UpdateDragPosition(position);
     }
 
-    private void StartDrag(IDragable dragable, Attachable attachable)
+    private void StartDrag(IDragable dragable, SimpleAttachable attachable)
     {
         currentDrag = dragable;
         currentAttachable = attachable;
@@ -81,10 +81,10 @@ public class MouseInteractor : MonoBehaviour
         dragable.EndDrag(point + dragable.GetEndDragYOffset() * Vector3.up);
     }
 
-    private void EndDrag(IDragable dragable, Attacher attacher)
+    private void EndDrag(IAttachable attachable, IAttacher attacher)
     {
         currentAttachable = null;
         currentDrag = null;
-        dragable.EndDrag(attacher.transform);
+        attachable.EndDrag(attacher.GetTransform());
     }
 }
