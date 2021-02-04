@@ -13,6 +13,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable
     public void Attach(Transform toAttachTo)
     {
         isBeeingDragged = false;
+        isAttached = true;
 
         defaultParent = transform.parent;
         transform.parent = toAttachTo;
