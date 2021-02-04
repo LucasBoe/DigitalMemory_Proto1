@@ -8,6 +8,8 @@ public class SimpleAttachable : SimpleDragable, IAttachable
     Transform defaultParent;
     bool isAttached;
 
+    [SerializeField] protected AudioClip attachClip;
+
     public void EndDrag(Transform toAttachTo)
     {
         isBeeingDragged = false;
@@ -17,6 +19,8 @@ public class SimpleAttachable : SimpleDragable, IAttachable
         transform.localPosition = Vector3.zero;
 
         gameObject.layer = 0;
+
+        Game.SoundPlayer.Play(attachClip, gameObject);
     }
 
     public override void StartDrag()

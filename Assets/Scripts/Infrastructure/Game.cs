@@ -9,7 +9,8 @@ public class Game : MonoBehaviour
     private static Game instance;
     private static Game Instance
     {
-        get {
+        get
+        {
             if (instance == null)
                 instance = FindObjectOfType<Game>();
 
@@ -20,26 +21,40 @@ public class Game : MonoBehaviour
         }
     }
 
-    public static LevelHandler LevelHandler {
-        get {
+    public static LevelHandler LevelHandler
+    {
+        get
+        {
             return LevelHandler.GetInstance();
         }
     }
 
     public static TimeHandler TimeHandler
     {
-        get {
+        get
+        {
             return TimeHandler.GetInstance();
         }
-    } 
+    }
 
-    public static Game GetInstance () {
+    public static SoundPlayer SoundPlayer
+    {
+        get
+        {
+            return SoundPlayer.GetInstance();
+        }
+    }
+
+    public static Game GetInstance()
+    {
         return Instance;
     }
 
     private static GameSettings gameSettings;
-    public static GameSettings Settings {
-        get {
+    public static GameSettings Settings
+    {
+        get
+        {
             if (gameSettings == null)
                 gameSettings = LoadGameSettings();
 
