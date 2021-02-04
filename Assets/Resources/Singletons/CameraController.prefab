@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221530314552803821}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.3535534, y: -0.61237246, z: 0.3535534, w: 0.61237246}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1221530314861160360}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: -90, z: 0}
 --- !u!20 &1221530314552803808
 Camera:
   m_ObjectHideFlags: 0
@@ -177,14 +177,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b0d0f11a98d914aa49b12f141276ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePosition: {x: 0, y: 14, z: 0}
+  basePosition: {x: 10, y: 25, z: 0}
   baseRotation: {x: 0, y: 0, z: 0}
   xPosChangeByMouseX:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -2
+      value: -6
       inSlope: 9.623366
       outSlope: 9.623366
       tangentMode: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
       outWeight: 0.23411977
     - serializedVersion: 3
       time: 1
-      value: 2
+      value: 6
       inSlope: 13.025203
       outSlope: 13.025203
       tangentMode: 0
@@ -245,18 +245,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  xRotChangeByMouseY:
+  xRotChangeByMouseX:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: -10
-      inSlope: 53.129807
-      outSlope: 53.129807
+      inSlope: 42.931316
+      outSlope: 42.931316
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08620689
+      outWeight: 0.13157894
     - serializedVersion: 3
       time: 0.5
       value: 0
@@ -269,8 +269,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 10
-      inSlope: 60.85432
-      outSlope: 60.85432
+      inSlope: 59.064487
+      outSlope: 59.064487
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.08529949
@@ -278,18 +278,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  zRotChangeByMouseX:
+  zRotChangeByMouseY:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -10
-      inSlope: 53.129807
-      outSlope: 53.129807
+      value: 10
+      inSlope: -60.659733
+      outSlope: -60.659733
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.08620689
+      outWeight: 0.12796481
     - serializedVersion: 3
       time: 0.5
       value: 0
@@ -301,12 +301,12 @@ MonoBehaviour:
       outWeight: 0.23411977
     - serializedVersion: 3
       time: 1
-      value: 10
-      inSlope: 60.85432
-      outSlope: 60.85432
+      value: -10
+      inSlope: -60.93895
+      outSlope: -60.93895
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.08529949
+      inWeight: 0.12899339
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
