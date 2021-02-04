@@ -10,7 +10,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable
 
     [SerializeField] protected AudioClip attachClip;
 
-    public void EndDrag(Transform toAttachTo)
+    public void Attach(Transform toAttachTo)
     {
         isBeeingDragged = false;
 

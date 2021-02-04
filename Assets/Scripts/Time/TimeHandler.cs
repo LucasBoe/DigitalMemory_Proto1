@@ -5,7 +5,22 @@ using UnityEngine;
 
 public class TimeHandler : Singleton<TimeHandler>
 {
+    private int time;
     public event System.Action<int> OnTimeChanged;
+
+    [Button]
+    public void IncreaseTime()
+    {
+        time++;
+        OnTimeChanged(time);
+    }
+
+    [Button]
+    public void DecreaseTime()
+    {
+        time++;
+        OnTimeChanged(time);
+    }
 
     [Button]
     private void Set0()

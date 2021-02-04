@@ -14,7 +14,7 @@ public interface IDragable
 
 public interface IAttachable : IDragable
 {
-    void EndDrag(Transform toAttachTo);
+    void Attach(Transform toAttachTo);
     string GetAttachment();
 }
 
