@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8911718179700599338}
   - component: {fileID: 2683593029098246503}
   - component: {fileID: 6372319434489956190}
-  - component: {fileID: 6799427086894757079}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6799427086894757079
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268999303217416123}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2656760927689259884
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5627334636308865193}
+  - component: {fileID: 2329604380044594966}
+  - component: {fileID: 2346828564194578385}
+  - component: {fileID: 6387939553956852595}
   m_Layer: 0
   m_Name: JewGroup
   m_TagString: Untagged
@@ -139,6 +127,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2329604380044594966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656760927689259884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aee1cc419bc32446b3799e74e13d819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 2346828564194578385}
+  YOffsetOnDrop: 2
+  startDragClip: {fileID: 8300000, guid: 37f14850d21fcdd4cb2ff38cd660d2eb, type: 3}
+  endDragClip: {fileID: 8300000, guid: ac3e02c3f7b48bc4fa605f054d713c5e, type: 3}
+  attachment: Slot
+  attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+--- !u!54 &2346828564194578385
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656760927689259884}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &6387939553956852595
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656760927689259884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.1324297
+  m_Height: 3.224112
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &278544168442275787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,7 +230,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7648300370931680377, guid: 3c25e992718abc1479a6b0083c5e0f30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c25e992718abc1479a6b0083c5e0f30, type: 3}
 --- !u!4 &7499853909823202074 stripped
 Transform:
@@ -318,7 +355,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5423194353440915755, guid: bc7aa23ba0b5fd74685632691a1b34c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc7aa23ba0b5fd74685632691a1b34c9, type: 3}
 --- !u!4 &6781552441347242270 stripped
 Transform:
@@ -380,7 +418,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jew1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9177050225042805187, guid: 2343450364ce9ce4ea8af1ca477f18c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2343450364ce9ce4ea8af1ca477f18c1, type: 3}
 --- !u!4 &5905210347331908020 stripped
 Transform:
@@ -442,7 +481,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Protagonist
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5565634830349564183, guid: d23d97cf96291e14bbc31c2fe9589877, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d23d97cf96291e14bbc31c2fe9589877, type: 3}
 --- !u!4 &8380094132943858125 stripped
 Transform:
@@ -504,7 +544,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4824088530678858100, guid: 7a1dc7b09022dfa44a1959416b651bbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a1dc7b09022dfa44a1959416b651bbb, type: 3}
 --- !u!4 &983670414991481377 stripped
 Transform:
@@ -566,7 +607,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7648300370931680377, guid: 3c25e992718abc1479a6b0083c5e0f30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c25e992718abc1479a6b0083c5e0f30, type: 3}
 --- !u!4 &4217380879990095066 stripped
 Transform:
@@ -628,7 +670,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jew5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 926661289621669678, guid: e7c9644361f55b140b0ba1205d632f36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e7c9644361f55b140b0ba1205d632f36, type: 3}
 --- !u!4 &6509180919277234703 stripped
 Transform:
@@ -690,7 +733,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jew5 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 926661289621669678, guid: e7c9644361f55b140b0ba1205d632f36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e7c9644361f55b140b0ba1205d632f36, type: 3}
 --- !u!4 &8055282920153870424 stripped
 Transform:
@@ -752,7 +796,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jew1 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9177050225042805187, guid: 2343450364ce9ce4ea8af1ca477f18c1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2343450364ce9ce4ea8af1ca477f18c1, type: 3}
 --- !u!4 &830378682489941174 stripped
 Transform:
@@ -814,7 +859,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5423194353440915755, guid: bc7aa23ba0b5fd74685632691a1b34c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc7aa23ba0b5fd74685632691a1b34c9, type: 3}
 --- !u!4 &4357829280555455653 stripped
 Transform:
@@ -876,7 +922,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4824088530678858100, guid: 7a1dc7b09022dfa44a1959416b651bbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a1dc7b09022dfa44a1959416b651bbb, type: 3}
 --- !u!4 &3876550235684549258 stripped
 Transform:

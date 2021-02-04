@@ -172,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2344489939615927444}
   - component: {fileID: 1117427333524160447}
+  - component: {fileID: 2726663391755224505}
   m_Layer: 0
   m_Name: Slot
   m_TagString: Untagged
@@ -208,3 +209,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentName: Slot
+--- !u!135 &2726663391755224505
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603920667129066108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0, z: 0}

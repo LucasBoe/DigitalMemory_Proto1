@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c526030010204e04098635100e7ed8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragDistance: 5
+  dragDistance: 10
   ignoreRaycast:
     serializedVersion: 2
     m_Bits: 16
