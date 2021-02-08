@@ -18,7 +18,7 @@ public class TimeHandler : Singleton<TimeHandler>
     [Button]
     public void DecreaseTime()
     {
-        time++;
+        time--;
         OnTimeChanged(time);
     }
 
