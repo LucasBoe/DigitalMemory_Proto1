@@ -11,18 +11,36 @@ public class TimeHandler : Singleton<TimeHandler>
 
     public event System.Action<int> OnTimeChanged;
 
+    public void StartNewSequence(int startTime, int endTime, bool startFromBeginning = true)
+    {
+        timeMin = startTime;
+        timeMax = endTime;
+
+        time = startFromBeginning ? startTime : endTime;
+    }
+
     public void IncreaseTime(int amount)
     {
-        time= Mathf.Clamp(time+amount,timeMin,timeMax);
-        Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
-        OnTimeChanged(time);
+        if (time + amount > timeMax)
+            Game.SequenceHandler.TryPlayAfter();
+        else
+        {
+            time = Mathf.Clamp(time + amount, timeMin, timeMax);
+            Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
+            OnTimeChanged(time);
+        }
     }
 
     public void DecreaseTime(int amount)
     {
-        time = Mathf.Clamp(time - amount, timeMin, timeMax);
-        Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
-        OnTimeChanged(time);
+        if (time - amount < timeMin)
+            Game.SequenceHandler.TryPlayBefore();
+        else
+        {
+            time = Mathf.Clamp(time - amount, timeMin, timeMax);
+            Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
+            OnTimeChanged(time);
+        }
     }
 
     [Button]

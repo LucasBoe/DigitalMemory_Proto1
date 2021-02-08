@@ -20,7 +20,7 @@ public class TimeListener : MonoBehaviour
         Game.TimeHandler.OnTimeChanged -= OnTimeChanged;
     }
 
-    private void OnTimeChanged (int newTime)
+    private void OnTimeChanged(int newTime)
     {
         animator.SetFloat("time", newTime);
     }
