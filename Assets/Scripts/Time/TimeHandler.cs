@@ -8,17 +8,15 @@ public class TimeHandler : Singleton<TimeHandler>
     private int time;
     public event System.Action<int> OnTimeChanged;
 
-    [Button]
-    public void IncreaseTime()
+    public void IncreaseTime(int amount)
     {
-        time++;
+        time+= amount;
         OnTimeChanged(time);
     }
 
-    [Button]
-    public void DecreaseTime()
+    public void DecreaseTime(int amount)
     {
-        time--;
+        time-= amount;
         OnTimeChanged(time);
     }
 
