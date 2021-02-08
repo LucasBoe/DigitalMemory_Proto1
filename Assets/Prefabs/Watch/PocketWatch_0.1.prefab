@@ -221,6 +221,7 @@ MonoBehaviour:
   attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
   hourHand: {fileID: 1313404300562839493}
   minuteHand: {fileID: 1359431363991232568}
+  rearrangeClip: {fileID: 8300000, guid: ba7d2997eeb8e5b41995ce63494ec18b, type: 3}
 --- !u!54 &7011348852482894634
 Rigidbody:
   m_ObjectHideFlags: 0
