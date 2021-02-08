@@ -10,20 +10,16 @@ public class TimeChangeButton : MonoBehaviour, IClickable
 
     public void Click()
     {
-        if (buttonAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-        {
-            if (increase)
-                Game.TimeHandler.IncreaseTime();
-            else
-                Game.TimeHandler.DecreaseTime();
+        if (increase)
+            Game.TimeHandler.IncreaseTime();
+        else
+            Game.TimeHandler.DecreaseTime();
 
-            buttonAnimator.SetTrigger("OnClick");
-        }
-        
+        buttonAnimator.SetTrigger("OnClick");
     }
 
     public bool IsClickable()
     {
-        return true;
+        return buttonAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle");
     }
 }
