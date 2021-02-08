@@ -20,8 +20,8 @@ public interface IAttachable : IDragable
 
 public class SimpleDragable : MonoBehaviour, IDragable
 {
-    [SerializeField] Rigidbody rigidbody;
-    [SerializeField] float YOffsetOnDrop;
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private float YOffsetOnDrop;
     [SerializeField] protected AudioClip startDragClip, endDragClip;
 
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class SimpleAttachable : SimpleDragable, IAttachable
 {
     public string attachment;
-    Transform defaultParent;
-    bool isAttached;
+    [SerializeField] private bool isAttached;
+    [SerializeField] private Transform defaultParent;
 
     [SerializeField] protected AudioClip attachClip;
 
@@ -31,7 +31,10 @@ public class SimpleAttachable : SimpleDragable, IAttachable
         if (isAttached)
         {
             isAttached = false;
-            transform.parent = defaultParent;
+            if (defaultParent != null)
+                transform.parent = defaultParent;
+            else
+                Debug.LogWarning("No default parent defined unparenting impossible, please define one!");
         }
     }
     public string GetAttachment()
