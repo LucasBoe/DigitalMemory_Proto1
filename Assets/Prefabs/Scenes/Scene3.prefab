@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &107194102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495244500935626389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4483f8a52dbb67d4daff7083c560c274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  variableName: FireSlotAttached
+--- !u!114 &1296751561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496418686845738577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4483f8a52dbb67d4daff7083c560c274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2048392966}
+  variableName: CenterSlotAttached
 --- !u!54 &1578859948594249444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36,6 +64,20 @@ MonoBehaviour:
   isAttached: 1
   defaultParent: {fileID: 6019594772035041705}
   attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+--- !u!114 &909521010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4183676937624481030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4483f8a52dbb67d4daff7083c560c274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2048392966}
+  variableName: HouseSlotAttached
 --- !u!1 &6019594772035041710
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+--- !u!1 &4183676937624481030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7603920667129066108, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+  m_PrefabInstance: {fileID: 6019594770750594938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8286808722398483438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
@@ -2125,6 +2172,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
   m_PrefabInstance: {fileID: 8023720948014349545}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &495244500935626389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7603920667129066108, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+  m_PrefabInstance: {fileID: 8023720948014349545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8026874298070527021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2146,7 +2198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2182,6 +2234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+--- !u!1 &496418686845738577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7603920667129066108, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+  m_PrefabInstance: {fileID: 8026874298070527021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5759086363907203257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
