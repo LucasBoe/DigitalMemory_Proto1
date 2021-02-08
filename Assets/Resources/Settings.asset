@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5bd8ba9fa3e416aaeb9ff742ea0155, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  dragDistanceToFloor: 0
+  DragDistanceToFloor: 3
+  AttachPreviewOffset: {x: 0, y: 0.5, z: 0}

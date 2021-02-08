@@ -8,6 +8,7 @@ public interface IAttacher
     Transform GetTransform();
     void OnAttach();
     void OnDetach();
+    Vector3 GetPosition();
 }
 
 public class Attacher : MonoBehaviour, IAttacher
@@ -18,6 +19,11 @@ public class Attacher : MonoBehaviour, IAttacher
     public bool CanAttach(string attachmentName)
     {
         return this.attachmentName == attachmentName;
+    }
+
+    public virtual Vector3 GetPosition()
+    {
+        return transform.position;
     }
 
     public Transform GetTransform()

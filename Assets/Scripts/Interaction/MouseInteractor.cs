@@ -48,13 +48,22 @@ public class MouseInteractor : MonoBehaviour
 
     private void UpdateDrag(RaycastHit hit, Ray ray)
     {
-        float dragDistance = Vector3.Distance(ray.origin, hit.point) - Game.Settings.dragDistanceToFloor;
-        currentDrag.UpdateDragPosition(ray.GetPoint(dragDistance));
+        IAttacher attacher = hit.collider.GetComponent<IAttacher>();
 
+        //preview
+        if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable.GetAttachment()))
+        {
+            currentDrag.UpdateDragPosition(attacher.GetPosition() + Game.Settings.AttachPreviewOffset);
+        }
+        else
+        {
+            float dragDistance = Vector3.Distance(ray.origin, hit.point) - Game.Settings.DragDistanceToFloor;
+            currentDrag.UpdateDragPosition(ray.GetPoint(dragDistance));
+        }
+
+        //click
         if (Input.GetMouseButtonUp(0))
         {
-            IAttacher attacher = hit.collider.GetComponent<IAttacher>();
-
             if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable.GetAttachment()))
                 Attach(currentAttachable, attacher);
             else

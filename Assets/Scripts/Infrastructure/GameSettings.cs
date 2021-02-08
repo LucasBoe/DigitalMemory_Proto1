@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameSettings : ScriptableObject
 {
-    public float dragDistanceToFloor;
+    public float DragDistanceToFloor;
+    public Vector3 AttachPreviewOffset;
 }
