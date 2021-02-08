@@ -219,6 +219,8 @@ MonoBehaviour:
   isAttached: 0
   defaultParent: {fileID: 0}
   attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+  hourHand: {fileID: 1313404300562839493}
+  minuteHand: {fileID: 1359431363991232568}
 --- !u!54 &7011348852482894634
 Rigidbody:
   m_ObjectHideFlags: 0
