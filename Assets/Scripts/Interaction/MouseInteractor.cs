@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MouseInteractor : MonoBehaviour
 {
-    [SerializeField] float dragDistance;
     [SerializeField] LayerMask ignoreRaycast;
 
     IDragable currentDrag;
@@ -49,6 +48,7 @@ public class MouseInteractor : MonoBehaviour
 
     private void UpdateDrag(RaycastHit hit, Ray ray)
     {
+        float dragDistance = Vector3.Distance(ray.origin, hit.point) - Game.Settings.dragDistanceToFloor;
         currentDrag.UpdateDragPosition(ray.GetPoint(dragDistance));
 
         if (Input.GetMouseButtonUp(0))
