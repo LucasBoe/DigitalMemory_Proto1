@@ -13,7 +13,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 
     public static T LoadResourceFromName(string name) {
         Singleton<T> prefab = Resources.Load<Singleton<T>>("Singletons/"+name);
-        return (T)Instantiate(prefab,Game.GetInstance().transform);
+        return (T)Instantiate(prefab, Game.GetInstance().transform);
     }
 
     protected virtual void Start () {
@@ -37,7 +37,6 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
                 else
                 {
                     instance = CreateBlind();
-
                 }
             }
         }

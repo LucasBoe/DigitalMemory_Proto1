@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a362ea5b28b4734dac38323b3036d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  timeMin: 0
+  timeMax: 12
+  rearrangeClip: {fileID: 8300000, guid: ba7d2997eeb8e5b41995ce63494ec18b, type: 3}

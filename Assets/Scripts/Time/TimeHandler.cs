@@ -5,18 +5,23 @@ using UnityEngine;
 
 public class TimeHandler : Singleton<TimeHandler>
 {
-    private int time;
+    [SerializeField] private int time, timeMin, timeMax;
+
+    [SerializeField] AudioClip rearrangeClip;
+
     public event System.Action<int> OnTimeChanged;
 
     public void IncreaseTime(int amount)
     {
-        time+= amount;
+        time= Mathf.Clamp(time+amount,timeMin,timeMax);
+        Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
         OnTimeChanged(time);
     }
 
     public void DecreaseTime(int amount)
     {
-        time-= amount;
+        time = Mathf.Clamp(time - amount, timeMin, timeMax);
+        Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
         OnTimeChanged(time);
     }
 
