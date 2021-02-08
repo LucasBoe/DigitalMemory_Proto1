@@ -130,6 +130,7 @@ MonoBehaviour:
   increase: 1
   timeChangeAmount: 3
   buttonAnimator: {fileID: 5694626989708648362}
+  clickSound: {fileID: 8300000, guid: 655fa74068ecaca45a9d4f6a0936900c, type: 3}
 --- !u!64 &3590098472417786433
 MeshCollider:
   m_ObjectHideFlags: 0

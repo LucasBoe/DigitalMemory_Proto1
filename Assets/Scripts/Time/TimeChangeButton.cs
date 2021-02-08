@@ -8,9 +8,12 @@ public class TimeChangeButton : MonoBehaviour, IClickable
     [SerializeField] bool increase;
     [SerializeField] int timeChangeAmount;
     [SerializeField] Animator buttonAnimator;
+    [SerializeField] AudioClip clickSound;
 
     public void Click()
     {
+        Game.SoundPlayer.Play(clickSound);
+
         if (increase)
             Game.TimeHandler.IncreaseTime(timeChangeAmount);
         else
