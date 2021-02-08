@@ -41,4 +41,12 @@ public class SimpleAttachable : SimpleDragable, IAttachable
     {
         return attachment;
     }
+
+    public IAttacher GetCurrentAttached()
+    {
+        if (isAttached)
+            return GetComponentInParent<IAttacher>();
+
+        return null;
+    }
 }

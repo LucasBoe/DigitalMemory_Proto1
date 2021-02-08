@@ -16,6 +16,7 @@ public interface IAttachable : IDragable
 {
     void Attach(Transform toAttachTo);
     string GetAttachment();
+    IAttacher GetCurrentAttached();
 }
 
 public class SimpleDragable : MonoBehaviour, IDragable

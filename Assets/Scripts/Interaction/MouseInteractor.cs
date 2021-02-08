@@ -71,7 +71,13 @@ public class MouseInteractor : MonoBehaviour
     {
         currentDrag = dragable;
         currentAttachable = attachable;
+
+        IAttacher attacher = (attachable == null ? null : attachable.GetCurrentAttached());
+        if (attacher != null)
+            attacher.OnDetach();
+
         dragable.StartDrag();
+        
     }
 
     private void EndDrag(IDragable dragable, Vector3 point)
@@ -85,6 +91,9 @@ public class MouseInteractor : MonoBehaviour
     {
         currentAttachable = null;
         currentDrag = null;
+
+        attacher.OnAttach();
+
         attachable.Attach(attacher.GetTransform());
     }
 }
