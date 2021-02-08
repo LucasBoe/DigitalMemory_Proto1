@@ -15,7 +15,7 @@ public class Game : MonoBehaviour
                 instance = FindObjectOfType<Game>();
 
             if (instance == null)
-                new GameObject("GAME").AddComponent<Game>();
+                instance = new GameObject("GAME").AddComponent<Game>();
 
             return instance;
         }
@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
     {
         get
         {
-            return TimeHandler.GetInstance();
+            return TimeHandler.GetInstance(usePrefab: true);
         }
     }
 
