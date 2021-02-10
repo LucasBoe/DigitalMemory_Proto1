@@ -124,13 +124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f5c8d035541414eb99f8399c8f8c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 6246045633916946802}
   startTime: 0
   endTime: 9
+  maxTime: 9
+  minTime: -3
+  startReversedTime: 6
   before: {fileID: 0}
   after: {fileID: 0}
-  StartDelay: 1
-  StartReversedDelay: 1
+  StartDelay: 3
+  StartReversedDelay: 3
 --- !u!95 &6246045633916946802
 Animator:
   serializedVersion: 3
