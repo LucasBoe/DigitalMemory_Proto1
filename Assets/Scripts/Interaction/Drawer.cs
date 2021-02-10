@@ -6,25 +6,23 @@ using UnityEngine;
 public class Drawer : MonoBehaviour, IDragable
 {
     bool isDragging = false;
-    Vector3 startDragPosition, defaultPosition;
-    [SerializeField] Vector3 dragAxis, drag, minDrag, maxDrag;
-
-    private void Start ()
-    {
-        defaultPosition = transform.localPosition;
-    }
+    Vector3 startDragPosition;
+    [SerializeField] float drawerSpeedMultiplier;
+    [SerializeField] Vector3 dragAxis, position, current, target, minDrag, maxDrag;
 
     public void EndDrag(Vector3 position)
     {
         SetPulledOut(startDragPosition, position);
+        target = Vector3.zero;
         isDragging = false;
     }
 
     private void SetPulledOut(Vector3 startDragPosition, Vector3 currentDragPosition)
     {
-        Vector3 currentDrag = drag + (currentDragPosition.FilterByAxisVector(dragAxis) - startDragPosition.FilterByAxisVector(dragAxis));
-        if (currentDrag.FilterByAxisVector(dragAxis).MinWithoutZero() >= minDrag.MinWithoutZero() && currentDrag.FilterByAxisVector(dragAxis).MaxWithoutZero() <= maxDrag.MaxWithoutZero())
-            transform.localPosition = currentDrag;
+        Vector3 currentDrag = (currentDragPosition.FilterByAxisVector(dragAxis) - startDragPosition.FilterByAxisVector(dragAxis));
+        current = (position + currentDrag).FilterByAxisVector(dragAxis);
+        if (current.FilterByAxis(dragAxis) <= minDrag.FilterByAxis(dragAxis) && current.FilterByAxis(dragAxis) >= maxDrag.FilterByAxis(dragAxis))
+            target = position + currentDrag;
     }
 
     public float GetEndDragYOffset()
@@ -40,7 +38,7 @@ public class Drawer : MonoBehaviour, IDragable
     public void StartDrag()
     {
         isDragging = true;
-        drag = transform.localPosition;
+        position = transform.localPosition;
         startDragPosition = Vector3.zero;
     }
 
@@ -51,6 +49,14 @@ public class Drawer : MonoBehaviour, IDragable
         else
         {
             SetPulledOut(startDragPosition, hitpoint);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (target != Vector3.zero)
+        {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, drawerSpeedMultiplier);
         }
     }
 }

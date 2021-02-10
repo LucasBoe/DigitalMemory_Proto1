@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2682943902182023458}
   - component: {fileID: 2674909988855319868}
   - component: {fileID: 2715065560941572954}
+  - component: {fileID: 5895923248404908116}
   m_Layer: 0
   m_Name: SnowTree1
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 0fc5a751f1b114d5c9530838b9b117d4, type: 3}
+--- !u!114 &5895923248404908116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687817284176073636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonInteractable: {fileID: 8300000, guid: c2c40e033bf262b4980397dde3aae712, type: 3}
