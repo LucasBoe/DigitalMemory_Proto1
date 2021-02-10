@@ -12,14 +12,14 @@ public class TimeHandler : Singleton<TimeHandler>
 
     public event System.Action<int> OnTimeChanged;
 
-    public void StartNewSequence(int minTime, int startTime, int endTime, int maxTime, bool startFromBeginning = true)
+    public void StartNewSequence(Sequence newSequence, bool startFromBeginning = true)
     {
-        timeMin = minTime;
-        timeMax = maxTime;
-        timeStart = startTime;
-        timeEnd = endTime;
+        timeMin = newSequence.minTime;
+        timeMax = newSequence.maxTime;
+        timeStart = newSequence.startTime;
+        timeEnd = newSequence.endTime;
 
-        time = startFromBeginning ? startTime : endTime;
+        time = startFromBeginning ? newSequence.startTime : newSequence.startReversedTime;
         OnTimeChanged(time);
     }
 

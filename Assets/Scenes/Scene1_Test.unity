@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -198,6 +198,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &78369162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+  m_PrefabInstance: {fileID: 1381336264953805982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167232817
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +271,7 @@ Transform:
   - {fileID: 653260038}
   - {fileID: 1043966150}
   - {fileID: 2039481269}
+  - {fileID: 78369162}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -904,6 +910,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 415540153}
     m_Modifications:
+    - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 9.403955e-38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 4.5905e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 8.650836e+11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5905e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.6835e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1200705238351695313, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_Name
       value: Lights
@@ -1011,6 +1045,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ece225d823b79bd47becb0856b0d41a8, type: 3}
+--- !u!1001 &1381336264953805982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 415540153}
+    m_Modifications:
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687828, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381336265009687831, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
+      propertyPath: m_Name
+      value: Snow/Wind SFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a37ca9bd9d4d85b4597323ca7176d6f4, type: 3}
 --- !u!1001 &4289959963865917873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1028,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1036,7 +1127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.64
+      value: -11.889999
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalRotation.w

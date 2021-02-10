@@ -20,6 +20,16 @@ public static class ExtentionHolder
         return new Vector3(vector3.x * axisVector.x, vector3.y * axisVector.y, vector3.z * axisVector.z);
     }
 
+    public static float FilterByAxis(this Vector3 vector3, Vector3 axisVector)
+    {
+        if (axisVector.x != 0f)
+            return vector3.x;
+        else if (axisVector.y != 0f)
+            return vector3.y;
+        else
+            return vector3.z;
+    }
+
     public static float Min(this Vector3 vector3)
     {
         return Mathf.Min(vector3.x, vector3.y, vector3.z);
