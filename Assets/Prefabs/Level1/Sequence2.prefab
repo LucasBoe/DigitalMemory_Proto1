@@ -82,11 +82,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f5c8d035541414eb99f8399c8f8c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4825841944790863138}
   startTime: 0
   endTime: 12
+  maxTime: 12
+  minTime: -3
+  startReversedTime: 9
   before: {fileID: 0}
   after: {fileID: 0}
+  StartDelay: 3
+  StartReversedDelay: 3
 --- !u!95 &4825841944790863138
 Animator:
   serializedVersion: 3
@@ -1730,6 +1734,10 @@ PrefabInstance:
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037510903895171743, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7603920667129066108, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_Name
