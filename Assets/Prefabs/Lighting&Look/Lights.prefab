@@ -28,7 +28,8 @@ Transform:
   m_LocalRotation: {x: 0.7064338, y: 0.47771442, z: 0.030843567, w: 0.5213338}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1200705237543443672}
   m_Father: {fileID: 1200705238351695314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
@@ -107,9 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lerpMultiplier: 5
-  isNightLight: 0
   dayLightAngleOffset: 80
-  moonLightAngleOffset: 260
+  mainLight: {fileID: 1200705237256979844}
 --- !u!1 &1200705237543443679
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1200705237543443672}
   - component: {fileID: 1200705237543443674}
-  - component: {fileID: 1200705237543443673}
   m_Layer: 0
   m_Name: MoonLight
   m_TagString: Untagged
@@ -135,12 +134,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200705237543443679}
-  m_LocalRotation: {x: 0.030843705, y: -0.5213337, z: -0.7064338, w: 0.47771454}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000022351742}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1200705238351695314}
-  m_RootOrder: 1
+  m_Father: {fileID: 1200705237256979845}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 225, y: 130, z: 90}
 --- !u!108 &1200705237543443674
 Light:
@@ -204,22 +203,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &1200705237543443673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200705237543443679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b6aa1789cc2ce4ebd5a5518070d91c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lerpMultiplier: 5
-  isNightLight: 1
-  dayLightAngleOffset: 80
-  moonLightAngleOffset: 260
 --- !u!1 &1200705238351695313
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +231,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1200705237256979845}
-  - {fileID: 1200705237543443672}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
