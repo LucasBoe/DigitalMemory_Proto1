@@ -1,3 +1,4 @@
+using NaughtyAttributes.Test;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,10 +7,17 @@ using UnityEngine;
 public class DaylightTimeAdapter : MonoBehaviour
 {
     [SerializeField] float lerpMultiplier = 1;
+    [SerializeField] bool isNightLight = false;
+
+    [SerializeField] float dayLightAngleOffset = 80f;
+    [SerializeField] float moonLightAngleOffset = 260f;
 
     private Vector3 myEuler;
     private Quaternion targetRotation;
     private Quaternion currentRotation;
+
+    private float myOffset;
+   
 
 
     private void OnEnable()
@@ -25,6 +33,15 @@ public class DaylightTimeAdapter : MonoBehaviour
 
     private void Start()
     {
+        if (isNightLight)
+        {
+            myOffset = moonLightAngleOffset;
+        }
+        else
+        {
+            myOffset = dayLightAngleOffset;
+        }
+
         myEuler = gameObject.transform.localRotation.eulerAngles;
         OnTimeChanged(0);
     }
@@ -39,7 +56,7 @@ public class DaylightTimeAdapter : MonoBehaviour
 
     private void OnTimeChanged(int currentTime)
     {
-       targetRotation = Quaternion.Euler(((currentTime % 24f) / 24) * 360f + 80f, myEuler.y, myEuler.z);
+       targetRotation = Quaternion.Euler(((currentTime % 24f) / 24) * 360f + myOffset, myEuler.y, myEuler.z);
     }
 
 

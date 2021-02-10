@@ -17,6 +17,7 @@ public class TimeHandler : Singleton<TimeHandler>
         timeMax = endTime;
 
         time = startFromBeginning ? startTime : endTime;
+        OnTimeChanged(time);
     }
 
     public void IncreaseTime(int amount)
