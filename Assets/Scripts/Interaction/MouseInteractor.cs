@@ -53,12 +53,12 @@ public class MouseInteractor : MonoBehaviour
         //preview
         if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable.GetAttachment()))
         {
-            currentDrag.UpdateDragPosition(attacher.GetPosition() + Game.Settings.AttachPreviewOffset);
+            currentDrag.UpdateDragPosition(hit.point, attacher.GetPosition() + Game.Settings.AttachPreviewOffset);
         }
         else
         {
             float dragDistance = Vector3.Distance(ray.origin, hit.point) - Game.Settings.DragDistanceToFloor;
-            currentDrag.UpdateDragPosition(ray.GetPoint(dragDistance));
+            currentDrag.UpdateDragPosition(hit.point ,ray.GetPoint(dragDistance));
         }
 
         //click

@@ -12,6 +12,7 @@ public class TimeListener : MonoBehaviour
             Debug.LogWarning("No Animator Referenced at " + gameObject + ". Please add one or remove the TimeListener script.");
         }
 
+        animator.keepAnimatorControllerStateOnDisable = true;
         Game.TimeHandler.OnTimeChanged += OnTimeChanged;
     }
 
