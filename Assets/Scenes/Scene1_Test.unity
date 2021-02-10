@@ -510,13 +510,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
+    - target: {fileID: 1875100296944038950, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656760926621839953, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656760927452775263, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5627334635228866964, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5627334636562208922, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6246045633916946801, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_Name
@@ -570,6 +582,10 @@ PrefabInstance:
       propertyPath: after
       value: 
       objectReference: {fileID: 1366054377}
+    - target: {fileID: 8050476179646154137, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: startTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
 --- !u!114 &1323678898 stripped
@@ -895,6 +911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138677393}
   - component: {fileID: 2138677392}
+  - component: {fileID: 2138677394}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -978,6 +995,19 @@ Transform:
   m_Father: {fileID: 415540153}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
+--- !u!114 &2138677394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138677391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b6aa1789cc2ce4ebd5a5518070d91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpMultiplier: 5
 --- !u!1001 &1221530313018770488
 PrefabInstance:
   m_ObjectHideFlags: 0

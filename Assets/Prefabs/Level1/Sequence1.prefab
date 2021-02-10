@@ -125,10 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6246045633916946802}
-  startTime: -3
+  startTime: 0
   endTime: 9
   before: {fileID: 0}
   after: {fileID: 0}
+  StartDelay: 1
+  StartReversedDelay: 1
 --- !u!95 &6246045633916946802
 Animator:
   serializedVersion: 3
