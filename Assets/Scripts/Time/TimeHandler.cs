@@ -25,7 +25,7 @@ public class TimeHandler : Singleton<TimeHandler>
     {
         if (time + amount <= timeMax)
         {
-            time = Mathf.Clamp(time + amount, timeMin, timeMax);
+            time += amount;
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
             OnTimeChanged(time);
         }
@@ -46,7 +46,7 @@ public class TimeHandler : Singleton<TimeHandler>
     {
         if (time - amount >= timeMin)
         {
-            time = Mathf.Clamp(time - amount, timeMin, timeMax);
+            time -= amount;
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
             OnTimeChanged(time);
         }
