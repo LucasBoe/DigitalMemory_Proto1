@@ -7,6 +7,7 @@ public class MouseInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask ignoreRaycast;
 
+    GameObject currenHoverTEMP;
     IDragable currentDrag;
     IAttachable currentAttachable;
 
@@ -20,6 +21,8 @@ public class MouseInteractor : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 100, ~ignoreRaycast))
         {
+            currenHoverTEMP = hit.collider.gameObject;
+
             if (IsDragging)
             {
                 UpdateDrag(hit, ray);
@@ -28,6 +31,9 @@ public class MouseInteractor : MonoBehaviour
             {
                 UpdateNonDrag(hit);
             }
+        } else
+        {
+            currenHoverTEMP = null;
         }
     }
 
@@ -104,5 +110,13 @@ public class MouseInteractor : MonoBehaviour
         attacher.OnAttach();
 
         attachable.Attach(attacher.GetTransform());
+    }
+
+    private void OnGUI()
+    {
+        if (currenHoverTEMP != null)
+            GUILayout.Box("hover: " + currenHoverTEMP);
+        else
+            GUILayout.Box("no hover.");
     }
 }
