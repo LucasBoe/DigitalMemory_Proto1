@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 2346828564194578385}
   YOffsetOnDrop: 2
-  startDragClip: {fileID: 8300000, guid: 37f14850d21fcdd4cb2ff38cd660d2eb, type: 3}
+  startDragClip: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
   endDragClip: {fileID: 8300000, guid: ac3e02c3f7b48bc4fa605f054d713c5e, type: 3}
   attachment: Slot
   isAttached: 0
