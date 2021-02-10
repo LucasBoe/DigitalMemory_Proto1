@@ -4,12 +4,11 @@ using UnityEngine;
 
 public interface IDragable
 {
-    void UpdateDragPosition(Vector3 vector3);
-     
     void StartDrag();
     void EndDrag(Vector3 position);
     float GetEndDragYOffset();
     bool IsDragable();
+    void UpdateDragPosition(Vector3 point, Vector3 vector3);
 }
 
 public interface IAttachable : IDragable
@@ -54,7 +53,7 @@ public class SimpleDragable : MonoBehaviour, IDragable
         Game.SoundPlayer.Play(startDragClip, gameObject);
     }
 
-    public void UpdateDragPosition(Vector3 position)
+    public void UpdateDragPosition(Vector3 hitpoint, Vector3 position)
     {
         transform.position = position;
     }
