@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,14 @@ public class TimeHandler : Singleton<TimeHandler>
 
         if (time + amount >= timeMax)
             Game.SequenceHandler.TryPlayAfter();
+    }
+
+    public void ForceTimeSet(int newTime)
+    {
+        Debug.LogWarning("Forced Time to " + newTime);
+
+        time = newTime;
+        OnTimeChanged(newTime);
     }
 
     public void DecreaseTime(int amount)

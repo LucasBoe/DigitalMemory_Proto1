@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TimeListener : MonoBehaviour
 {
-    [SerializeField] Animator animator;
+    protected Animator animator;
     private void OnEnable()
     {
+        animator = GetComponent<Animator>();
+
         if (animator == null)
         {
             Debug.LogWarning("No Animator Referenced at " + gameObject + ". Please add one or remove the TimeListener script.");
@@ -21,7 +23,7 @@ public class TimeListener : MonoBehaviour
         Game.TimeHandler.OnTimeChanged -= OnTimeChanged;
     }
 
-    private void OnTimeChanged(int newTime)
+    protected virtual void OnTimeChanged(int newTime)
     {
         animator.SetFloat("time", newTime);
     }
