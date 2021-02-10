@@ -21,26 +21,28 @@ public class TimeHandler : Singleton<TimeHandler>
 
     public void IncreaseTime(int amount)
     {
-        if (time + amount > timeMax)
-            Game.SequenceHandler.TryPlayAfter();
-        else
+        if (time + amount <= timeMax)
         {
             time = Mathf.Clamp(time + amount, timeMin, timeMax);
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
             OnTimeChanged(time);
         }
+
+        if (time + amount >= timeMax)
+            Game.SequenceHandler.TryPlayAfter();
     }
 
     public void DecreaseTime(int amount)
     {
-        if (time - amount < timeMin)
-            Game.SequenceHandler.TryPlayBefore();
-        else
+        if (time - amount >= timeMin)
         {
             time = Mathf.Clamp(time - amount, timeMin, timeMax);
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
             OnTimeChanged(time);
         }
+
+        if (time <= timeMin)
+            Game.SequenceHandler.TryPlayBefore();
     }
 
     [Button]

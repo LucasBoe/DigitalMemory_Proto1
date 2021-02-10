@@ -9,26 +9,23 @@ public class SequenceHandler : Singleton<SequenceHandler>
     internal void TryPlayBefore()
     {
         if (current.before != null)
-        {
-            Sequence before = current.before;
-            before.gameObject.SetActive(true);
-            current.gameObject.SetActive(false);
-            current = before;
-
-            Game.TimeHandler.StartNewSequence(current.startTime, current.endTime, startFromBeginning: false);
-        }
+            StartCoroutine(ChangeSequenceDelayed(current, current.before, startFromBeginning: false));
     }
 
     internal void TryPlayAfter()
     {
         if (current.after != null)
-        {
-            Sequence after = current.after;
-            after.gameObject.SetActive(true);
-            current.gameObject.SetActive(false);
-            current = after;
+            StartCoroutine(ChangeSequenceDelayed(current, current.after));
+    }
 
-            Game.TimeHandler.StartNewSequence(current.startTime, current.endTime);
-        }
+    IEnumerator ChangeSequenceDelayed(Sequence from, Sequence to, bool startFromBeginning = true)
+    {
+        yield return new WaitForSeconds(startFromBeginning ? to.StartDelay : to.StartReversedDelay);
+
+        to.gameObject.SetActive(true);
+        from.gameObject.SetActive(false);
+
+        current = to;
+        Game.TimeHandler.StartNewSequence(current.startTime, current.endTime, startFromBeginning);
     }
 }
