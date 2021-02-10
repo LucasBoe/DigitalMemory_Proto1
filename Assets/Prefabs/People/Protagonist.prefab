@@ -176,12 +176,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 1578859948594249444}
   YOffsetOnDrop: 0
-  startDragClip: {fileID: 8300000, guid: 37f14850d21fcdd4cb2ff38cd660d2eb, type: 3}
+  startDragClip: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
   endDragClip: {fileID: 8300000, guid: ac3e02c3f7b48bc4fa605f054d713c5e, type: 3}
   attachment: Slot
   isAttached: 1
   defaultParent: {fileID: 0}
-  attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+  attachClip: {fileID: 8300000, guid: 1209f0f6eb664444798961c957cdb45a, type: 3}
 --- !u!1001 &3687693301102884599
 PrefabInstance:
   m_ObjectHideFlags: 0
