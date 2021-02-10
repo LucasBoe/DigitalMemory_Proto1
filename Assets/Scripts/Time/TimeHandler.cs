@@ -6,16 +6,18 @@ using UnityEngine;
 
 public class TimeHandler : Singleton<TimeHandler>
 {
-    [SerializeField] private int time, timeMin, timeMax;
+    [SerializeField] private int time, timeMin, timeMax, timeStart, timeEnd;
 
     [SerializeField] AudioClip rearrangeClip;
 
     public event System.Action<int> OnTimeChanged;
 
-    public void StartNewSequence(int startTime, int endTime, bool startFromBeginning = true)
+    public void StartNewSequence(int minTime, int startTime, int endTime, int maxTime, bool startFromBeginning = true)
     {
-        timeMin = startTime;
-        timeMax = endTime;
+        timeMin = minTime;
+        timeMax = maxTime;
+        timeStart = startTime;
+        timeEnd = endTime;
 
         time = startFromBeginning ? startTime : endTime;
         OnTimeChanged(time);

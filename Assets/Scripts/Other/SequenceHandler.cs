@@ -26,6 +26,6 @@ public class SequenceHandler : Singleton<SequenceHandler>
         from.gameObject.SetActive(false);
 
         current = to;
-        Game.TimeHandler.StartNewSequence(current.startTime, current.endTime, startFromBeginning);
+        Game.TimeHandler.StartNewSequence(current.minTime, current.startTime, current.endTime, current.maxTime, startFromBeginning);
     }
 }
