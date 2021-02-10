@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sequence : TimeListener
+public class Sequence : TimeSetListener
 {
     public int startTime, endTime;
     public Sequence before, after;
