@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6246045633916946801, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6246045633916946804, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_RootOrder
@@ -1069,6 +1069,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
+    - target: {fileID: 378614394176824771, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17199963
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126646100065834173, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4239996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212673618140742149, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2212673618140742149, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6019594772035041705, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1119,13 +1135,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6019594772035041710, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963888878746999007, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965522660535170107, guid: 1347992d80b654649af838638180edd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.492
       objectReference: {fileID: 0}
     - target: {fileID: 6992843731831595327, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: before
       value: 
       objectReference: {fileID: 1366054377}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6963888878746999007, guid: 1347992d80b654649af838638180edd4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1347992d80b654649af838638180edd4, type: 3}
 --- !u!114 &6019594771186448174 stripped
 MonoBehaviour:
