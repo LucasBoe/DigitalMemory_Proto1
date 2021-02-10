@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6093064236257713534}
   - component: {fileID: 6099012976424887180}
   - component: {fileID: 6058915416290452034}
+  - component: {fileID: 8886617543167260789}
   m_Layer: 0
   m_Name: Jeep-willys-base
   m_TagString: Untagged
@@ -198,6 +199,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7c88c6c540fd64bf7910ee0efc7257a4, type: 3}
+--- !u!114 &8886617543167260789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121080928845075134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonInteractable: {fileID: 8300000, guid: 49d67a6665714dc448127305cf15ec79, type: 3}
 --- !u!1 &6121119394661662522
 GameObject:
   m_ObjectHideFlags: 0
