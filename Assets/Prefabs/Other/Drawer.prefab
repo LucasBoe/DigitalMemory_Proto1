@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3040450227550576187}
   - component: {fileID: 4785946429002828782}
   - component: {fileID: 3034441298128767670}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 2192963023713964434}
   - component: {fileID: 2437063208792628142}
   - component: {fileID: 7928411215424706221}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Side (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,8 +319,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 10, y: 0.5, z: 10}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!114 &4289959964450468101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 2301314642542949932}
   - component: {fileID: 3835277004676767282}
   - component: {fileID: 8520539696838843720}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}

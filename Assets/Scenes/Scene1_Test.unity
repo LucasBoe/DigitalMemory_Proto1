@@ -1109,6 +1109,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2040364343288189753, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862764762264084942, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468098, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_Name
       value: Drawer
@@ -1156,6 +1164,10 @@ PrefabInstance:
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531545598418270352, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
