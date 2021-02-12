@@ -50,6 +50,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
             UpdatePositionAndRotation(closeupable, tPos, tRot, lerp: true);
         }
 
+        closeupable.UpdatePositionAndRotation(tPos,tRot);
         closeupable.OnEndCloseup();
     }
 
