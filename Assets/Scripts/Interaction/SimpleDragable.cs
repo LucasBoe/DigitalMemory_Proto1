@@ -20,14 +20,14 @@ public interface IAttachable : IDragable
 
 public class SimpleDragable : MonoBehaviour, IDragable
 {
-    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] protected Rigidbody rigidbody;
     [SerializeField] private float YOffsetOnDrop;
     [SerializeField] protected AudioClip startDragClip, endDragClip;
 
 
     protected bool isBeeingDragged = false;
 
-    public bool IsDragable()
+    public virtual bool IsDragable()
     {
         return !isBeeingDragged;
     }

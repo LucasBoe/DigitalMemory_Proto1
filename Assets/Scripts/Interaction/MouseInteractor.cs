@@ -8,32 +8,55 @@ public class MouseInteractor : MonoBehaviour
     [SerializeField] LayerMask ignoreRaycast;
 
     GameObject currenHoverTEMP;
+
     IDragable currentDrag;
     IAttachable currentAttachable;
+    ICloseupable currentCloseupable;
 
+    public bool IsInCloseup { get => (currentCloseupable != null); }
     public bool IsDragging { get => (currentDrag != null); }
     public bool IsDraggingAttachable { get => (currentAttachable != null); }
 
     private void Update()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit, 100, ~ignoreRaycast))
+        if (IsInCloseup)
         {
-            currenHoverTEMP = hit.collider.gameObject;
+            UpdateCloseup();
+        }
+        else
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (IsDragging)
+            if (Physics.Raycast(ray, out hit, 100, ~ignoreRaycast))
             {
-                UpdateDrag(hit, ray);
+                currenHoverTEMP = hit.collider.gameObject;
+
+                if (IsDragging)
+                {
+                    UpdateDrag(hit, ray);
+                }
+                else
+                {
+                    UpdateNonDrag(hit);
+                }
             }
             else
             {
-                UpdateNonDrag(hit);
+                currenHoverTEMP = null;
             }
+        }
+    }
+
+    private void UpdateCloseup()
+    {
+        if (Input.GetMouseButtonUp(1))
+        {
+            Game.CloseupHandler.EndCloseup(currentCloseupable);
+            currentCloseupable = null;
         } else
         {
-            currenHoverTEMP = null;
+            Game.CloseupHandler.UpdateCloseup(currentCloseupable);
         }
     }
 
@@ -50,6 +73,15 @@ public class MouseInteractor : MonoBehaviour
             else if (clickable != null && clickable.IsClickable())
                 ClickOn(clickable);
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            ICloseupable closeupable = hit.collider.GetComponent<ICloseupable>();
+            if (closeupable != null)
+            {
+                currentCloseupable = closeupable;
+                Game.CloseupHandler.StartCloseup(currentCloseupable);
+            }
+        }
     }
 
     private void UpdateDrag(RaycastHit hit, Ray ray)
@@ -64,7 +96,7 @@ public class MouseInteractor : MonoBehaviour
         else
         {
             float dragDistance = Vector3.Distance(ray.origin, hit.point) - Game.Settings.DragDistanceToFloor;
-            currentDrag.UpdateDragPosition(hit.point ,ray.GetPoint(dragDistance));
+            currentDrag.UpdateDragPosition(hit.point, ray.GetPoint(dragDistance));
         }
 
         //click
@@ -92,7 +124,7 @@ public class MouseInteractor : MonoBehaviour
             attacher.OnDetach();
 
         dragable.StartDrag();
-        
+
     }
 
     private void EndDrag(IDragable dragable, Vector3 point)
@@ -114,7 +146,7 @@ public class MouseInteractor : MonoBehaviour
     private void OnGUI()
     {
         if (currenHoverTEMP != null)
-            GUILayout.Box("hover: " + currenHoverTEMP);
+            GUILayout.Box("hover: " + currenHoverTEMP + "\n closeup: " + IsInCloseup);
         else
             GUILayout.Box("no hover.");
     }

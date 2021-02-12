@@ -2,9 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleAttachable : SimpleDragable, IAttachable
+public interface ICloseupable
+{
+    Vector3 GetPosition();
+    Quaternion GetRotation();
+    void UpdatePositionAndRotation(Vector3 pos, Quaternion rot);
+    void OnStartCloseup();
+    void OnEndCloseup();
+}
+
+public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 {
     public string attachment;
+    private bool isInCloseup;
     [SerializeField] private bool isAttached;
     [SerializeField] private Transform defaultParent;
 
@@ -53,5 +63,38 @@ public class SimpleAttachable : SimpleDragable, IAttachable
             return GetComponentInParent<IAttacher>();
 
         return null;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
+    public Quaternion GetRotation()
+    {
+        return transform.rotation;
+    }
+
+    public void UpdatePositionAndRotation(Vector3 pos, Quaternion rot)
+    {
+        transform.position = pos;
+        transform.rotation = rot;
+    }
+
+    public void OnStartCloseup()
+    {
+        isInCloseup = true;
+        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    public void OnEndCloseup()
+    {
+        isInCloseup = false;
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotationY;
+    }
+
+    public override bool IsDragable()
+    {
+        return base.IsDragable() && !isInCloseup;
     }
 }

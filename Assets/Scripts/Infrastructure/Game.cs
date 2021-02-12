@@ -53,6 +53,14 @@ public class Game : MonoBehaviour
         }
     }
 
+    public static CloseupHandler CloseupHandler
+    {
+        get
+        {
+            return CloseupHandler.GetInstance();
+        }
+    }
+
     public static Game GetInstance()
     {
         return Instance;
