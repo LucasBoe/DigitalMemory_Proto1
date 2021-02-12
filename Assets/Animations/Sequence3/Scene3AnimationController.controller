@@ -1234,7 +1234,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Scene3ConditionNotMet2
+  m_Name: Set Time 0
   m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
@@ -1249,7 +1249,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 4253e39267aebe14aa25d6f3a1d5d9c6, type: 2}
-  m_Tag: 
+  m_Tag: 12
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -1364,7 +1364,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Scene3ConditionNotMet1
+  m_Name: Set Time
   m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
@@ -1379,7 +1379,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 15947cb5e2ae7b34fbb65d3a2c66e9f8, type: 2}
-  m_Tag: 
+  m_Tag: 3
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
