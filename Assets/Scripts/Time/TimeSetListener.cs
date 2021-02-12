@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,24 @@ public class TimeSetListener : TimeListener
         if (listen)
         {
             AnimatorStateInfo current = animator.GetCurrentAnimatorStateInfo(0);
+
             if (current.IsName("Set Time"))
             {
                 listen = false;
-                lastSet = (int)current.speed;
-                Game.TimeHandler.ForceTimeSet((int)current.speed);
+                int time = GetTimeFromTagHash(current.tagHash);
+                Game.TimeHandler.ForceTimeSet(time);
             }
 
         }
+    }
+    private int GetTimeFromTagHash(int tagHash)
+    {
+        for (int i = 0; i <= 24; i++)
+        {
+            if (tagHash == Animator.StringToHash(i.ToString()))
+                return i;
+        }
+
+        return int.MinValue;
     }
 }
