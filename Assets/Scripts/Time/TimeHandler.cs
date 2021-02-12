@@ -38,7 +38,7 @@ public class TimeHandler : Singleton<TimeHandler>
 
     public void ForceTimeSet(int newTime)
     {
-        Debug.LogWarning("Forced Time to " + newTime);
+        Debug.Log("Set Time to: " + newTime);
 
         time = newTime;
         OnTimeChanged(newTime);
@@ -55,29 +55,5 @@ public class TimeHandler : Singleton<TimeHandler>
 
         if (time <= timeMin)
             Game.SequenceHandler.TryPlayBefore();
-    }
-
-    [Button]
-    private void Set0()
-    {
-        OnTimeChanged.Invoke(0);
-    }
-
-    [Button]
-    private void Set3()
-    {
-        OnTimeChanged.Invoke(3);
-    }
-
-    [Button]
-    private void Set6()
-    {
-        OnTimeChanged.Invoke(6);
-    }
-
-    [Button]
-    private void Set9()
-    {
-        OnTimeChanged.Invoke(9);
     }
 }

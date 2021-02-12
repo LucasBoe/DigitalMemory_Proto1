@@ -84,7 +84,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     public void OnStartCloseup()
     {
         isInCloseup = true;
-        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        SetPhysicsActive(false);
     }
 
     public void OnEndCloseup()
@@ -92,7 +92,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         isInCloseup = false;
 
         if (!isAttached)
-            rigidbody.constraints = RigidbodyConstraints.FreezeRotationY;
+            SetPhysicsActive(true);
     }
 
     public override bool IsDragable()

@@ -13,8 +13,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     Quaternion targetRotation;
 
     [SerializeField] Transform closeupTransform;
-
-    internal void StartCloseup(ICloseupable currentCloseupable)
+    public void StartCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("start closeup");
 
@@ -23,21 +22,21 @@ public class CloseupHandler : Singleton<CloseupHandler>
         originalRotation = currentCloseupable.GetRotation();
     }
 
-    internal void UpdateCloseup(ICloseupable currentCloseupable)
-    {
-        Debug.Log("update closeup");
-
-        targetPosition = closeupTransform.position;
-        targetRotation = Quaternion.Euler(Input.mousePosition.y,Input.mousePosition.x,0);
-        UpdatePositionAndRotation(currentCloseupable, targetPosition, targetRotation, Vector3.Distance(targetPosition, currentCloseupable.GetPosition()) > 0.01f);
-    }
-
-    internal void EndCloseup(ICloseupable currentCloseupable)
+    public void EndCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("end closeup");
 
         StartCoroutine(PanBackRoutine(currentCloseupable));
     }
+    public void UpdateCloseup(ICloseupable currentCloseupable)
+    {
+        Debug.Log("update closeup");
+
+        targetPosition = closeupTransform.position;
+        targetRotation = Quaternion.Euler(Input.mousePosition.y, Input.mousePosition.x, 0);
+        UpdatePositionAndRotation(currentCloseupable, targetPosition, targetRotation, Vector3.Distance(targetPosition, currentCloseupable.GetPosition()) > 0.01f);
+    }
+
 
     IEnumerator PanBackRoutine(ICloseupable closeupable)
     {
