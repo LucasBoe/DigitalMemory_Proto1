@@ -8,7 +8,8 @@ public interface IAttacher
     Transform GetTransform();
     void OnAttach();
     void OnDetach();
-    Vector3 GetPosition();
+    Vector3 GetPosition(Vector3 point);
+    bool ResetPositionOnAttach();
 }
 
 public class Attacher : MonoBehaviour, IAttacher
@@ -22,7 +23,7 @@ public class Attacher : MonoBehaviour, IAttacher
         return this.attachmentName == attachmentName;
     }
 
-    public virtual Vector3 GetPosition()
+    public virtual Vector3 GetPosition(Vector3 point)
     {
         return transform.position;
     }
@@ -42,5 +43,10 @@ public class Attacher : MonoBehaviour, IAttacher
     {
         isAttached = false;
         OnChangeAttached?.Invoke(isAttached);
+    }
+
+    public bool ResetPositionOnAttach()
+    {
+        return true;
     }
 }
