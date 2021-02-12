@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawer : MonoBehaviour, IDragable
+public class Drawer : MonoBehaviour, IDragable, IAttacher
 {
     bool isDragging = false;
     Vector3 startDragPosition;
@@ -58,5 +58,35 @@ public class Drawer : MonoBehaviour, IDragable
         {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, drawerSpeedMultiplier);
         }
+    }
+
+    public bool CanAttach(string attachBehaviour)
+    {
+        return true;
+    }
+
+    public Transform GetTransform()
+    {
+        return transform;
+    }
+
+    public void OnAttach()
+    {
+        //
+    }
+
+    public void OnDetach()
+    {
+        //
+    }
+
+    public Vector3 GetPosition(Vector3 point)
+    {
+        return point;
+    }
+
+    public bool ResetPositionOnAttach()
+    {
+        return false;
     }
 }

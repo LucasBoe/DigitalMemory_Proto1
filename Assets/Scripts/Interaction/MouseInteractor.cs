@@ -59,7 +59,7 @@ public class MouseInteractor : MonoBehaviour
         //preview
         if (IsDraggingAttachable && attacher != null && attacher.CanAttach(currentAttachable.GetAttachment()))
         {
-            currentDrag.UpdateDragPosition(hit.point, attacher.GetPosition() + Game.Settings.AttachPreviewOffset);
+            currentDrag.UpdateDragPosition(hit.point, attacher.GetPosition(hit.point) + Game.Settings.AttachPreviewOffset);
         }
         else
         {
@@ -108,8 +108,7 @@ public class MouseInteractor : MonoBehaviour
         currentDrag = null;
 
         attacher.OnAttach();
-
-        attachable.Attach(attacher.GetTransform());
+        attachable.Attach(attacher);
     }
 
     private void OnGUI()

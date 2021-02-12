@@ -13,7 +13,7 @@ public interface IDragable
 
 public interface IAttachable : IDragable
 {
-    void Attach(Transform toAttachTo);
+    void Attach(IAttacher toAttachTo);
     string GetAttachment();
     IAttacher GetCurrentAttached();
 }

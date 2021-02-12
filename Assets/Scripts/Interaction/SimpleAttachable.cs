@@ -10,14 +10,16 @@ public class SimpleAttachable : SimpleDragable, IAttachable
 
     [SerializeField] protected AudioClip attachClip;
 
-    public void Attach(Transform toAttachTo)
+    public void Attach(IAttacher toAttachTo)
     {
         isBeeingDragged = false;
         isAttached = true;
 
         defaultParent = transform.parent;
-        transform.parent = toAttachTo;
-        transform.localPosition = Vector3.zero;
+        transform.parent = toAttachTo.GetTransform();
+
+        if (toAttachTo.ResetPositionOnAttach())
+            transform.localPosition = Vector3.zero;
 
         gameObject.layer = 0;
 
