@@ -52,6 +52,13 @@ public class Game : MonoBehaviour
             return SoundPlayer.GetInstance();
         }
     }
+    public static EffectHandler EffectHandler
+    {
+        get
+        {
+            return EffectHandler.GetInstance();
+        }
+    }
 
     public static CloseupHandler CloseupHandler
     {
