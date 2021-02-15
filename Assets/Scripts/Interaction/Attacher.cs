@@ -8,14 +8,17 @@ public interface IAttacher
     Transform GetTransform();
     void OnAttach();
     void OnDetach();
-    Vector3 GetPosition(Vector3 point);
+    Vector3 GetPreviewPosition(Vector3 point);
     bool ResetPositionOnAttach();
+    bool ResetOrientationOnAttach();
+    Vector3 GetAttachOffset();
 }
 
 public class Attacher : MonoBehaviour, IAttacher
 {
     public string attachmentName;
     [SerializeField] protected bool isAttached;
+    [SerializeField] Vector3 attachmentOffset;
     public event System.Action<bool> OnChangeAttached;
 
     public bool CanAttach(string attachmentName)
@@ -23,7 +26,12 @@ public class Attacher : MonoBehaviour, IAttacher
         return this.attachmentName == attachmentName || this.attachmentName == "";
     }
 
-    public virtual Vector3 GetPosition(Vector3 point)
+    public Vector3 GetAttachOffset()
+    {
+        return attachmentOffset;
+    }
+
+    public virtual Vector3 GetPreviewPosition(Vector3 point)
     {
         return transform.position;
     }
@@ -45,8 +53,19 @@ public class Attacher : MonoBehaviour, IAttacher
         OnChangeAttached?.Invoke(isAttached);
     }
 
+    public bool ResetOrientationOnAttach()
+    {
+        return true;
+    }
+
     public bool ResetPositionOnAttach()
     {
         return true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position + attachmentOffset, 0.5f);
     }
 }

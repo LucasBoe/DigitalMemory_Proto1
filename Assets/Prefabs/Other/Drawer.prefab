@@ -453,6 +453,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   minDrag: {x: 0, y: 0, z: -9.5}
   maxDrag: {x: 0, y: 0, z: -15}
+  attachOffset: {x: 0, y: -2, z: 0}
 --- !u!1 &5948864533928557604
 GameObject:
   m_ObjectHideFlags: 0

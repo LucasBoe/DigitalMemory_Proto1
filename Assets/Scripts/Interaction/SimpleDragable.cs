@@ -50,7 +50,6 @@ public class SimpleDragable : MonoBehaviour, IDragable
     public virtual void StartDrag()
     {
         isBeeingDragged = true;
-        transform.rotation = Quaternion.identity;
         SetPhysicsActive(false);
         SetMouseRaycastable(false);
         Game.SoundPlayer.Play(startDragClip, gameObject);
