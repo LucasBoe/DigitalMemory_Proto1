@@ -50,7 +50,7 @@ public class MouseInteractor : MonoBehaviour
 
     private void UpdateCloseup()
     {
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Game.CloseupHandler.EndCloseup(currentCloseupable);
             currentCloseupable = null;
@@ -73,7 +73,7 @@ public class MouseInteractor : MonoBehaviour
             else if (clickable != null && clickable.IsClickable())
                 ClickOn(clickable);
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonUp(1))
         {
             ICloseupable closeupable = hit.collider.GetComponent<ICloseupable>();
             if (closeupable != null)
