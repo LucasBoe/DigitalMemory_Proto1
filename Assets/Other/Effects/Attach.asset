@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlaySoundEffect: 1
   soundEffect:
-    clip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+    clip: {fileID: 8300000, guid: 594aed9392ac4104399e25cada9c58ad, type: 3}
     playFromOrigin: 1
     volume: 0.75
     randomPitchRange: 0.25
