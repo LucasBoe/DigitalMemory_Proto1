@@ -16,7 +16,7 @@ public class Effect : ScriptableObject
     [Space]
 
     public bool PlayChangeShaderEffect;
-    [ShowIf("PlayChangeShaderEffect")] [Header("ChangeShader")] [SerializeField] ChangeShaderEffectData changeShaderEffect; 
+    [ShowIf("PlayChangeShaderEffect")] [Header("ChangeShader")] [SerializeField] ChangeShaderEffectData changeShaderEffect;
     [Space]
 
 
@@ -91,14 +91,18 @@ public class VisualEffectData : EffectData
 public class ChangeShaderEffectData : EffectData
 {
     public Shader shader;
+    public string boolName;
+    public bool boolValue;
+
     public override void PlayEffect(GameObject origin)
     {
-        MeshRenderer meshRenderer = origin.GetComponent<MeshRenderer>();
-        if (meshRenderer != null)
+        foreach (var renderer in origin.GetComponentsInChildren<MeshRenderer>())
         {
-            Color color = meshRenderer.material.color;
-            meshRenderer.material = new Material(shader);
-            meshRenderer.material.color = color;
+            if (renderer.material.shader == shader)
+            {
+                renderer.material = new Material(renderer.material);
+                renderer.material.SetInt(boolName, boolValue ? 1 : 0);
+            }
         }
     }
 }

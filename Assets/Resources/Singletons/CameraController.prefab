@@ -134,6 +134,8 @@ MonoBehaviour:
   ignoreRaycast:
     serializedVersion: 2
     m_Bits: 16
+  onHoverDragableEnter: {fileID: 11400000, guid: 5fe1544588a2380428fdd65417d02db1, type: 2}
+  onHoverDragableExit: {fileID: 11400000, guid: a9980cc6411067f4cb31d8abf0b82490, type: 2}
 --- !u!114 &792416819126875415
 MonoBehaviour:
   m_ObjectHideFlags: 0

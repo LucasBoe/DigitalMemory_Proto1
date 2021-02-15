@@ -1228,7 +1228,7 @@
     },
     "m_Name": "Fresnel Switch",
     "m_DefaultReferenceName": "Boolean_78db450268f7459cb84c5b007fc9d617",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "FresnelSwitch",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

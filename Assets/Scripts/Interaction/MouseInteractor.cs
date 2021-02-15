@@ -6,12 +6,15 @@ using UnityEngine;
 public class MouseInteractor : MonoBehaviour
 {
     [SerializeField] LayerMask ignoreRaycast;
+    [SerializeField] Effect onHoverDragableEnter, onHoverDragableExit;
 
-    GameObject currenHoverTEMP;
+    GameObject currenHoverTEMP, currentDragHover;
 
     IDragable currentDrag;
     IAttachable currentAttachable;
     ICloseupable currentCloseupable;
+
+    
 
     public bool IsInCloseup { get => (currentCloseupable != null); }
     public bool IsDragging { get => (currentDrag != null); }
@@ -54,7 +57,8 @@ public class MouseInteractor : MonoBehaviour
         {
             Game.CloseupHandler.EndCloseup(currentCloseupable);
             currentCloseupable = null;
-        } else
+        }
+        else
         {
             Game.CloseupHandler.UpdateCloseup(currentCloseupable);
         }
@@ -62,11 +66,29 @@ public class MouseInteractor : MonoBehaviour
 
     private void UpdateNonDrag(RaycastHit hit)
     {
+        IDragable dragable = hit.collider.GetComponent<IDragable>();
+        IClickable clickable = hit.collider.GetComponent<IClickable>();
+        IAttachable attachable = hit.collider.GetComponent<IAttachable>();
+
+        //Hover
+        GameObject newDragHover = null;
+        if (dragable != null)
+            newDragHover = hit.collider.gameObject;
+
+        if (currentDragHover != newDragHover)
+        {
+            if (currentDragHover != null)
+                Game.EffectHandler.Play(onHoverDragableExit, currentDragHover);
+
+            if (newDragHover != null)
+                Game.EffectHandler.Play(onHoverDragableEnter, newDragHover);
+
+            currentDragHover = newDragHover;
+        }
+
+        //Mouse
         if (Input.GetMouseButtonDown(0))
         {
-            IDragable dragable = hit.collider.GetComponent<IDragable>();
-            IClickable clickable = hit.collider.GetComponent<IClickable>();
-            IAttachable attachable = hit.collider.GetComponent<IAttachable>();
 
             if (dragable != null && dragable.IsDragable())
                 StartDrag(dragable, attachable);
