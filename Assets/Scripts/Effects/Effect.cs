@@ -75,10 +75,15 @@ public class SoundEffectData : EffectData
 public class VisualEffectData : EffectData
 {
     public Transform prefab;
+    public bool spawnRelativeToOrigin;
+    public Vector3 spawnOffset;
+    public float destroyDelay;
 
     public override void PlayEffect(GameObject origin)
     {
-        GameObject.Instantiate(prefab, origin.transform.position, Quaternion.identity);
+        Vector3 spawnPosition = (spawnRelativeToOrigin ? origin.transform.position : Vector3.zero) + spawnOffset;
+        Transform effectInstance = GameObject.Instantiate(prefab, spawnPosition, Quaternion.identity);
+        effectInstance.gameObject.AddComponent<Selfdestroy>().DestroyDelayed(destroyDelay);
     }
 }
 
@@ -104,6 +109,7 @@ public class PulsingEffectData : EffectData
 {
     public bool LimitedPulsing;
     public float duration;
+    public AnimationCurve pulseCurve;
 
     public override void PlayEffect(GameObject origin)
     {
@@ -114,9 +120,9 @@ public class PulsingEffectData : EffectData
         }
 
         if (LimitedPulsing)
-            effector.StartPulsing(duration);
+            effector.StartPulsing(duration, pulseCurve);
         else
-            effector.StartPulsing();
+            effector.StartPulsing(pulseCurve);
     }
 }
 
