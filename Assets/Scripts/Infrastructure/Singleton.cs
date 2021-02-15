@@ -20,6 +20,11 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         Game g = Game.GetInstance();
     }
 
+    public virtual void Init()
+    {
+        //
+    }
+
     public static T GetInstance(bool usePrefab = false, string prefabName = "") {
     
         if (instance == null)

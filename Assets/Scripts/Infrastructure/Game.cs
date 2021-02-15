@@ -68,6 +68,12 @@ public class Game : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        //Initialize Default Objects
+        LevelHandler.Init();
+    }
+
     public static Game GetInstance()
     {
         return Instance;
