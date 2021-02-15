@@ -6,6 +6,8 @@ using UnityEngine;
 public class PulsingEffector : MonoBehaviour
 {
     Vector3 defaultScale;
+    AnimationCurve curve;
+
     private void Start()
     {
         defaultScale = transform.localScale;
@@ -13,19 +15,21 @@ public class PulsingEffector : MonoBehaviour
 
     public float duration;
     //
-    internal void StartPulsing(float duration)
+    internal void StartPulsing(float duration, AnimationCurve pulseCurve)
     {
         this.duration = duration;
+        curve = pulseCurve;
     }
 
-    public void StartPulsing()
+    internal void StartPulsing(AnimationCurve pulseCurve)
     {
         duration = float.MaxValue;
+        curve = pulseCurve;
     }
     private void Update()
     {
         duration -= Time.deltaTime;
-        transform.localScale = defaultScale + Vector3.one * Mathf.Sin(Time.time);
+        transform.localScale = Vector3.one * curve.Evaluate(Time.time);
 
         if (duration <= 0)
             Stop();
