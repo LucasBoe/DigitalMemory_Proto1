@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,8 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     [SerializeField] private bool isAttached;
     [SerializeField] private Transform defaultParent;
 
-    [SerializeField] protected AudioClip attachClip;
+    [Expandable]
+    [SerializeField] protected Effect attachEffect;
 
     public void Attach(IAttacher toAttachTo)
     {
@@ -33,7 +35,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 
         gameObject.layer = 0;
 
-        Game.SoundPlayer.Play(attachClip, gameObject);
+        Game.EffectHandler.Play(attachEffect, gameObject);
     }
 
     public override void StartDrag()

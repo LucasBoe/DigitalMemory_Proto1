@@ -147,7 +147,7 @@ MonoBehaviour:
   attachment: Slot
   isAttached: 0
   defaultParent: {fileID: 0}
-  attachClip: {fileID: 8300000, guid: 1209f0f6eb664444798961c957cdb45a, type: 3}
+  attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
 --- !u!54 &2346828564194578385
 Rigidbody:
   m_ObjectHideFlags: 0
