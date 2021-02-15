@@ -12,6 +12,8 @@ public interface ICloseupable
     void OnEndCloseup();
 }
 
+
+[SelectionBase]
 public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 {
     public string attachment;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -196,7 +196,7 @@ Transform:
   m_Children:
   - {fileID: 1468855524}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &78369162 stripped
 Transform:
@@ -666,7 +666,7 @@ Transform:
   - {fileID: 1272089820}
   - {fileID: 1350762404}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350762401
 GameObject:
@@ -955,7 +955,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -0.000000003770662
+      value: -41.482697
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -963,7 +963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: -4.5185237e-19
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -975,11 +975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: -1
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1200705238351695313, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_Name
@@ -1166,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1381,7 +1381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7071874493904953443, guid: b5e4fe82536b38c4190d016a67ebacd0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7071874493904953443, guid: b5e4fe82536b38c4190d016a67ebacd0, type: 3}
       propertyPath: m_LocalPosition.x
