@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 4884012857018327043}
   - component: {fileID: 4892289413700541469}
   - component: {fileID: 4779974774629616289}
-  - component: {fileID: 304839911238683249}
+  - component: {fileID: -6010431847430716802}
+  - component: {fileID: 7689603629932331257}
   m_Layer: 0
   m_Name: NaziSoldier_Attachable
   m_TagString: Untagged
@@ -182,7 +183,7 @@ CapsuleCollider:
   m_Height: 2.6438649
   m_Direction: 1
   m_Center: {x: 0, y: 0.5417832, z: 0.024380416}
---- !u!114 &304839911238683249
+--- !u!114 &-6010431847430716802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,13 +192,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 4878755239481430201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Script: {fileID: 11500000, guid: 3aee1cc419bc32446b3799e74e13d819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nonInteractable: {fileID: 8300000, guid: bdbf6e4b40cee524db2e8424e1d6714e, type: 3}
-  shakeSpeed: 30
-  shakeAmount: 0.05
-  shakeDuration: 0.5
+  rigidbody: {fileID: 7689603629932331257}
+  YOffsetOnDrop: 2
+  startDragClip: {fileID: 8300000, guid: 37f14850d21fcdd4cb2ff38cd660d2eb, type: 3}
+  endDragClip: {fileID: 8300000, guid: ac3e02c3f7b48bc4fa605f054d713c5e, type: 3}
+  attachment: Nazi
+  isAttached: 0
+  defaultParent: {fileID: 0}
+  attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+--- !u!54 &7689603629932331257
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4878755239481430201}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1012071663397167873
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -144,7 +144,7 @@ MonoBehaviour:
   YOffsetOnDrop: 2
   startDragClip: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
   endDragClip: {fileID: 8300000, guid: d17b39ae737ba294680b9785313e89c9, type: 3}
-  attachment: Slot
+  attachment: Jew
   isAttached: 0
   defaultParent: {fileID: 0}
   attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}

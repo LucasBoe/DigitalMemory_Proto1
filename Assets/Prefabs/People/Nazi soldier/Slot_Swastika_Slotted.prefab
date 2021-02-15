@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1501339256984148312, guid: 3d6c45cffac407b42879d685dc0a52ac, type: 3}
+      propertyPath: isAttached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3887881268596394750, guid: 3d6c45cffac407b42879d685dc0a52ac, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521429061723295812, guid: 3d6c45cffac407b42879d685dc0a52ac, type: 3}
       propertyPath: m_Name
-      value: NaziSoldier_Slotted
+      value: Slot_Swastika_Slotted
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d6c45cffac407b42879d685dc0a52ac, type: 3}
@@ -69,6 +73,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6221714447198102882}
     m_Modifications:
+    - target: {fileID: -6010431847430716802, guid: 05d64e7c04ad6eb4ca4ca2d2154bff4b, type: 3}
+      propertyPath: isAttached
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4878755239481430201, guid: 05d64e7c04ad6eb4ca4ca2d2154bff4b, type: 3}
       propertyPath: m_Name
       value: NaziSoldier_Attachable
@@ -116,6 +124,10 @@ PrefabInstance:
     - target: {fileID: 4881845185123549073, guid: 05d64e7c04ad6eb4ca4ca2d2154bff4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689603629932331257, guid: 05d64e7c04ad6eb4ca4ca2d2154bff4b, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05d64e7c04ad6eb4ca4ca2d2154bff4b, type: 3}
