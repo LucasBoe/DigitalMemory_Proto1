@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nonInteractable: {fileID: 8300000, guid: bdbf6e4b40cee524db2e8424e1d6714e, type: 3}
-  shakedObject: {fileID: 0}
   shakeSpeed: 30
   shakeAmount: 0.05
   shakeDuration: 0.5
