@@ -7,6 +7,7 @@ public class EffectHandler : Singleton<EffectHandler>
 {
     internal void Play(Effect attachEffect, GameObject gameObject)
     {
-        attachEffect.Play(gameObject);
+        if (attachEffect != null)
+            attachEffect.Play(gameObject);
     }
 }

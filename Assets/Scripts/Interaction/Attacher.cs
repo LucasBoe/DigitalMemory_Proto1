@@ -20,7 +20,7 @@ public class Attacher : MonoBehaviour, IAttacher
 
     public bool CanAttach(string attachmentName)
     {
-        return this.attachmentName == attachmentName;
+        return this.attachmentName == attachmentName || this.attachmentName == "";
     }
 
     public virtual Vector3 GetPosition(Vector3 point)
