@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -955,23 +955,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -41.482697
+      value: 0.21231
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -4.5185237e-19
+      value: 0.507
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 4.5905e-41
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
@@ -979,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705238351695313, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_Name
@@ -1152,14 +1152,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2040364343288189753, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3862764762264084942, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468098, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_Name
       value: Drawer
@@ -1207,10 +1199,6 @@ PrefabInstance:
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7531545598418270352, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416413630d2ba6643883e92ef3c15251, type: 3}

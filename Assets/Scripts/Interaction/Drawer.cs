@@ -9,6 +9,7 @@ public class Drawer : MonoBehaviour, IDragable, IAttacher
     Vector3 startDragPosition;
     [SerializeField] float drawerSpeedMultiplier;
     [SerializeField] Vector3 dragAxis, position, current, target, minDrag, maxDrag;
+    [SerializeField] Vector3 attachOffset;
 
     public void EndDrag(Vector3 position)
     {
@@ -95,8 +96,14 @@ public class Drawer : MonoBehaviour, IDragable, IAttacher
         return false;
     }
 
-    public Vector3 GetAttachPosition()
+    public Vector3 GetAttachOffset()
     {
-        return Vector3.zero;
+        return attachOffset;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position + attachOffset, new Vector3(10,1,10));
     }
 }

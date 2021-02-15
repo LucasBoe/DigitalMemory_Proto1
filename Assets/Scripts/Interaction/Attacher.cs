@@ -11,7 +11,7 @@ public interface IAttacher
     Vector3 GetPreviewPosition(Vector3 point);
     bool ResetPositionOnAttach();
     bool ResetOrientationOnAttach();
-    Vector3 GetAttachPosition();
+    Vector3 GetAttachOffset();
 }
 
 public class Attacher : MonoBehaviour, IAttacher
@@ -26,7 +26,7 @@ public class Attacher : MonoBehaviour, IAttacher
         return this.attachmentName == attachmentName || this.attachmentName == "";
     }
 
-    public Vector3 GetAttachPosition()
+    public Vector3 GetAttachOffset()
     {
         return attachmentOffset;
     }
