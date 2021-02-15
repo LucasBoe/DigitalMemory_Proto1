@@ -14,12 +14,17 @@ public class LevelHandler : Singleton<LevelHandler>
 
             foreach (int index in Game.Settings.playableLevels)
             {
-                if (GUI.Button(new Rect(10, 10 + 60 * i, 400, 50), "Load: " + SceneManager.GetSceneAt(index).name))
+                if (GUI.Button(new Rect(10, 10 + 60 * i, 400, 50), "Load: " + SceneManager.GetSceneByBuildIndex(index).name))
                 {
-                    SceneManager.LoadScene(index, LoadSceneMode.Single);
+                    TryLoad(index);
                 }
                 i++;
             }
         }
+    }
+
+    public void TryLoad(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
     }
 }
