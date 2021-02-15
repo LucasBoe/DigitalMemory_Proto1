@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2346828564194578385}
   - component: {fileID: 6387939553956852595}
   m_Layer: 0
-  m_Name: JewGroup
+  m_Name: JewGroup_Attachable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
