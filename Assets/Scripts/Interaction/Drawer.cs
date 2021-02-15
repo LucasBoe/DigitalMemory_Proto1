@@ -80,7 +80,7 @@ public class Drawer : MonoBehaviour, IDragable, IAttacher
         //
     }
 
-    public Vector3 GetPosition(Vector3 point)
+    public Vector3 GetPreviewPosition(Vector3 point)
     {
         return point;
     }
@@ -88,5 +88,15 @@ public class Drawer : MonoBehaviour, IDragable, IAttacher
     public bool ResetPositionOnAttach()
     {
         return false;
+    }
+
+    public bool ResetOrientationOnAttach()
+    {
+        return false;
+    }
+
+    public Vector3 GetAttachPosition()
+    {
+        return Vector3.zero;
     }
 }

@@ -33,7 +33,10 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         transform.parent = toAttachTo.GetTransform();
 
         if (toAttachTo.ResetPositionOnAttach())
-            transform.localPosition = Vector3.zero;
+            transform.localPosition = toAttachTo.GetAttachPosition();
+
+        if (toAttachTo.ResetOrientationOnAttach())
+            transform.localRotation = Quaternion.identity;
 
         gameObject.layer = 0;
 
