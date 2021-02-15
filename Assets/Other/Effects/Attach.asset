@@ -24,9 +24,9 @@ MonoBehaviour:
     spawnRelativeToOrigin: 0
     spawnOffset: {x: 0, y: 0, z: 0}
     destroyDelay: 0
-  PlayChangeShaderEffect: 0
+  PlayChangeShaderEffect: 1
   changeShaderEffect:
-    shader: {fileID: 0}
+    shader: {fileID: -6465566751694194690, guid: 0f78c5a7fb119db4aa3e28bc2653905a, type: 3}
   PlayPulsingEffect: 1
   pulsingEffect:
     LimitedPulsing: 1
