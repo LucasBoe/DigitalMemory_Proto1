@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4779974774629616289}
   - component: {fileID: 304839911238683249}
   m_Layer: 0
-  m_Name: Nazi_Soldier_Slot
+  m_Name: Nazi_Soldier_Attachable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
