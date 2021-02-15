@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragDistanceToFloor: 3
   AttachPreviewOffset: {x: 0, y: 0.5, z: 0}
+  playableLevels: 00000000
