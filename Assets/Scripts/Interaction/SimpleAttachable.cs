@@ -85,12 +85,13 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     {
         isInCloseup = true;
         SetPhysicsActive(false);
+        SetMouseRaycastable(false);
     }
 
     public void OnEndCloseup()
     {
         isInCloseup = false;
-
+        SetMouseRaycastable(true);
         if (!isAttached)
             SetPhysicsActive(true);
     }

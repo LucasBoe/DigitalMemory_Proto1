@@ -30,14 +30,17 @@ public class SimpleDragable : MonoBehaviour, IDragable
     protected virtual void SetPhysicsActive(bool active)
     {
         if (active)
-        {
             rigidbody.constraints = RigidbodyConstraints.FreezeRotationY;
-            gameObject.layer = 0;
-        } else
-        {
-            gameObject.layer = Physics.IgnoreRaycastLayer;
+        else
             rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-        }
+    }
+
+    protected virtual void SetMouseRaycastable(bool raycastable)
+    {
+        if (raycastable)
+            gameObject.layer = 0;
+        else
+            gameObject.layer = Physics.IgnoreRaycastLayer;
     }
 
     public virtual bool IsDragable()
@@ -49,6 +52,7 @@ public class SimpleDragable : MonoBehaviour, IDragable
         isBeeingDragged = true;
         transform.rotation = Quaternion.identity;
         SetPhysicsActive(false);
+        SetMouseRaycastable(false);
         Game.SoundPlayer.Play(startDragClip, gameObject);
     }
     public void EndDrag(Vector3 position)
@@ -57,6 +61,7 @@ public class SimpleDragable : MonoBehaviour, IDragable
         transform.position = position;
         transform.rotation = Quaternion.Euler(Quaternion.identity.eulerAngles + new Vector3(9,9));
         SetPhysicsActive(true);
+        SetMouseRaycastable(true);
         Game.SoundPlayer.Play(endDragClip, gameObject);
     }
     public void UpdateDragPosition(Vector3 hitpoint, Vector3 position)
