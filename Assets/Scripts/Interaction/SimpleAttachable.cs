@@ -12,6 +12,8 @@ public interface ICloseupable
     void OnEndCloseup();
 }
 
+
+[SelectionBase]
 public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 {
     public string attachment;
@@ -31,7 +33,12 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         transform.parent = toAttachTo.GetTransform();
 
         if (toAttachTo.ResetPositionOnAttach())
-            transform.localPosition = Vector3.zero;
+            transform.localPosition = toAttachTo.GetAttachOffset();
+        else
+            transform.localPosition += toAttachTo.GetAttachOffset();
+
+        if (toAttachTo.ResetOrientationOnAttach())
+            transform.localRotation = Quaternion.identity;
 
         gameObject.layer = 0;
 

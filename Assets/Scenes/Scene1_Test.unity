@@ -196,7 +196,7 @@ Transform:
   m_Children:
   - {fileID: 1468855524}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &78369162 stripped
 Transform:
@@ -617,6 +617,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6426512786143358022, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: attachmentName
+      value: Jew
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426512786190862257, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
+      propertyPath: attachmentName
+      value: Jew
+      objectReference: {fileID: 0}
     - target: {fileID: 8050476179646154137, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: after
       value: 
@@ -666,7 +674,7 @@ Transform:
   - {fileID: 1272089820}
   - {fileID: 1350762404}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350762401
 GameObject:
@@ -955,31 +963,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -0.000000003770662
+      value: 0.21231
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 0.507
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237256979844, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 4.5905e-41
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705237543443674, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1200705238351695313, guid: da25c6749198fd14394705799fc80c42, type: 3}
       propertyPath: m_Name
@@ -1152,21 +1160,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2040364343288189753, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3862764762264084942, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468098, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_Name
       value: Drawer
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,10 +1207,6 @@ PrefabInstance:
     - target: {fileID: 4289959964450468105, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7531545598418270352, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
-      propertyPath: m_Layer
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416413630d2ba6643883e92ef3c15251, type: 3}
@@ -1381,7 +1377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7071874493904953443, guid: b5e4fe82536b38c4190d016a67ebacd0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7071874493904953443, guid: b5e4fe82536b38c4190d016a67ebacd0, type: 3}
       propertyPath: m_LocalPosition.x
