@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlaySoundEffect: 1
   soundEffect:
-    clip: {fileID: 8300000, guid: bdbf6e4b40cee524db2e8424e1d6714e, type: 3}
+    clip: {fileID: 8300000, guid: ba7d2997eeb8e5b41995ce63494ec18b, type: 3}
     playFromOrigin: 0
     volume: 1
     randomPitchRange: 0
@@ -39,15 +39,15 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 1
-        inSlope: 8.16298
-        outSlope: 8.16298
+        inSlope: 2.1110249
+        outSlope: 2.1110249
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.12250428
-        value: 2
+        time: 0.13497834
+        value: 1.2849426
         inSlope: 0.0000055901564
         outSlope: 0.0000055901564
         tangentMode: 0
