@@ -15,15 +15,15 @@ public class TimeListener : MonoBehaviour
         }
 
         animator.keepAnimatorControllerStateOnDisable = true;
-        Game.TimeHandler.OnTimeChanged += OnTimeChanged;
+        Game.TimeHandler.OnTimeUpdate += OnTimeUpdate;
     }
 
     private void OnDisable()
     {
-        Game.TimeHandler.OnTimeChanged -= OnTimeChanged;
+        Game.TimeHandler.OnTimeUpdate -= OnTimeUpdate;
     }
 
-    protected virtual void OnTimeChanged(int newTime)
+    protected virtual void OnTimeUpdate(float newTime)
     {
         animator.SetFloat("time", newTime);
     }
