@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1085,6 +1085,46 @@ PrefabInstance:
     - target: {fileID: 6847205076340558147, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
       propertyPath: m_Name
       value: Snow_VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.x.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.y.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.z.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.orbitalY.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847205076340558157, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
+      propertyPath: VelocityModule.orbitalOffsetY.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6847205076340558158, guid: d0e6187463003d346a1bb78a485772b4, type: 3}
       propertyPath: m_RootOrder
