@@ -7,6 +7,7 @@ using UnityEngine;
 public class TimeHandler : Singleton<TimeHandler>
 {
     [SerializeField] private float time, timeMin, timeMax, timeStart, timeEnd;
+    public float Time => time;
 
     [SerializeField] AudioClip rearrangeClip;
 
