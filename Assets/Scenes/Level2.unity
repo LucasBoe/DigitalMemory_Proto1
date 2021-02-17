@@ -1226,6 +1226,30 @@ PrefabInstance:
       propertyPath: startReversedTime
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 705761850608662712, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 705761850608662712, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659477226311725771, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659477226311725771, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908835269086936801, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908835269086936801, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.64
+      objectReference: {fileID: 0}
     - target: {fileID: 7520979292463453806, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_Name
       value: Sequence1
