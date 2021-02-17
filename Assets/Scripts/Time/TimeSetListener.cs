@@ -23,14 +23,11 @@ public class TimeSetListener : TimeListener
             AnimatorStateInfo current = animator.GetCurrentAnimatorStateInfo(0);
             if (last.shortNameHash != current.shortNameHash)
             {
-                if (current.IsName("Set Time"))
-                {
-                    listen = false;
-                    int time = GetTimeFromTagHash(current.tagHash);
+                listen = false;
+                int time = GetTimeFromTagHash(current.tagHash);
 
-                    if ((int)Game.TimeHandler.Time != time)
-                        Game.TimeHandler.ForceTimeSet(time);
-                }
+                if ((int)Game.TimeHandler.Time != time)
+                    Game.TimeHandler.ForceTimeSet(time);
 
                 last = current;
             }
