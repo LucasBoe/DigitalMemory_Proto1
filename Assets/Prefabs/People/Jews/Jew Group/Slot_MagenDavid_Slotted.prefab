@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2505876177222950836, guid: ef108c2c1d120194d98926db4d28c793, type: 3}
       propertyPath: m_Name
-      value: JewGroup_Slotted
+      value: Slot_MagenDavid_Slotted
       objectReference: {fileID: 0}
     - target: {fileID: 2994183157794505998, guid: ef108c2c1d120194d98926db4d28c793, type: 3}
       propertyPath: m_RootOrder
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5627334636308865193, guid: 1e9894d685111354180e45973f540fbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.341
+      value: 0.442
       objectReference: {fileID: 0}
     - target: {fileID: 5627334636308865193, guid: 1e9894d685111354180e45973f540fbc, type: 3}
       propertyPath: m_LocalPosition.z

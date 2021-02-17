@@ -8,6 +8,7 @@ public class AttachableWatch : SimpleAttachable
     [SerializeField] Transform hourHand, minuteHand;
     [SerializeField] AttachableWatchHand hand;
     [SerializeField] Effect timeResetEffect;
+    [SerializeField] GameObject[] dots;
     float time, targetTime;
     bool moves = false;
 
@@ -18,12 +19,28 @@ public class AttachableWatch : SimpleAttachable
     {
         Game.TimeHandler.OnForceTimeReset += OnForceTimeReset;
         Game.TimeHandler.OnTimeChange += OnTimeChange;
+        Game.SequenceHandler.OnStartNewSeqeunce += OnStartNewSeqeunce;
     }
 
     private void OnDisable()
     {
         Game.TimeHandler.OnForceTimeReset -= OnForceTimeReset;
         Game.TimeHandler.OnTimeChange -= OnTimeChange;
+        Game.SequenceHandler.OnStartNewSeqeunce += OnStartNewSeqeunce;
+    }
+
+    private void OnStartNewSeqeunce(Sequence newSeqence)
+    {
+        CreateNewTimeDots(newSeqence.TimeDots);
+    }
+
+    private void CreateNewTimeDots(List<int> timeDots)
+    {
+        if (dots != null && dots.Length > 0)
+        {
+            for (int i = 0; i < dots.Length; i++)
+                dots[i].SetActive(timeDots.Contains(i));
+        }
     }
 
     private void OnForceTimeReset(float newTime)

@@ -21,6 +21,11 @@ public class Attacher : MonoBehaviour, IAttacher
     [SerializeField] Vector3 attachmentOffset;
     public event System.Action<bool> OnChangeAttached;
 
+    private void Start()
+    {
+        OnChangeAttached(isAttached);
+    }
+
     public bool CanAttach(string attachmentName)
     {
         return this.attachmentName == attachmentName || this.attachmentName == "";

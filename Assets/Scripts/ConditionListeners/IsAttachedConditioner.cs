@@ -7,6 +7,7 @@ public class IsAttachedConditioner : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string variableName;
+    [SerializeField] Effect onAttachEffect, onDetachEffect;
     Attacher attacher;
     private void OnEnable()
     {
@@ -40,5 +41,7 @@ public class IsAttachedConditioner : MonoBehaviour
     {
         if (animator != null)
             animator.SetBool(variableName, isAttached);
+
+        Game.EffectHandler.Play(isAttached ? onAttachEffect : onDetachEffect, gameObject);
     }
 }
