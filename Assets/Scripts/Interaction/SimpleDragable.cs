@@ -37,10 +37,7 @@ public class SimpleDragable : MonoBehaviour, IDragable
 
     protected virtual void SetMouseRaycastable(bool raycastable)
     {
-        if (raycastable)
-            gameObject.layer = 0;
-        else
-            gameObject.layer = Physics.IgnoreRaycastLayer;
+        gameObject.layer = raycastable ? 0 : Physics.IgnoreRaycastLayer;
     }
 
     public virtual bool IsDragable()

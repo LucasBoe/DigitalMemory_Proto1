@@ -1179,6 +1179,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
+    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: endTime
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: maxTime
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: minTime
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: startTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: startReversedTime
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7520979292463453806, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_Name
       value: Sequence1
