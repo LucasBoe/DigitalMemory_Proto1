@@ -6,6 +6,13 @@ using UnityEngine;
 public class SequenceHandler : Singleton<SequenceHandler>
 {
     [SerializeField] Sequence current;
+    public event System.Action<Sequence> OnStartNewSeqeunce;
+
+    protected override void Start()
+    {
+        base.Start();
+        StartNewSequence(startFromBeginning: true);
+    }
     internal void TryPlayBefore()
     {
         if (current.before != null)
@@ -26,6 +33,12 @@ public class SequenceHandler : Singleton<SequenceHandler>
         from.gameObject.SetActive(false);
 
         current = to;
+        StartNewSequence(startFromBeginning);
+    }
+
+    private void StartNewSequence(bool startFromBeginning)
+    {
         Game.TimeHandler.StartNewSequence(current, startFromBeginning);
+        OnStartNewSeqeunce?.Invoke(current);
     }
 }
