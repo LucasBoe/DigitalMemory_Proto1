@@ -55,7 +55,6 @@ public class SimpleDragable : MonoBehaviour, IDragable
     {
         isBeeingDragged = false;
         transform.position = position;
-        transform.rotation = Quaternion.Euler(Quaternion.identity.eulerAngles + new Vector3(9,9));
         SetPhysicsActive(true);
         SetMouseRaycastable(true);
         Game.SoundPlayer.Play(endDragClip, gameObject);
