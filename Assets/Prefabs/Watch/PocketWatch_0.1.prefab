@@ -141,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5450fa2a609c18a4cbac82783d49b29a, type: 2}
+  - {fileID: 2100000, guid: 64e716699c0b0fb4ea763f380418a0b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   attachment: Watch
   isAttached: 0
   defaultParent: {fileID: 0}
-  attachClip: {fileID: 8300000, guid: 86918ea12c47176429291157002370ac, type: 3}
+  attachEffect: {fileID: 0}
   hourHand: {fileID: 1313404300562839493}
   minuteHand: {fileID: 1359431363991232568}
   timeBlendingCurve:
@@ -333,7 +333,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64e716699c0b0fb4ea763f380418a0b7, type: 2}
+  - {fileID: 5345549104973507493, guid: 8517f1bfa2280324bb5577c26083a4f8, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
