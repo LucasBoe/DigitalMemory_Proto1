@@ -25,11 +25,13 @@ public class TimeSetListener : TimeListener
             {
                 listen = false;
                 int time = GetTimeFromTagHash(current.tagHash);
+                if (time != int.MinValue)
+                {
+                    if ((int)Game.TimeHandler.Time != time)
+                        Game.TimeHandler.ForceTimeSet(time);
 
-                if ((int)Game.TimeHandler.Time != time)
-                    Game.TimeHandler.ForceTimeSet(time);
-
-                last = current;
+                    last = current;
+                }
             }
 
         }
