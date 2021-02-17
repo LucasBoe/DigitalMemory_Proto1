@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentName: Jew
   isAttached: 0
-  attachmentOffset: {x: 0, y: 0.32, z: 0}
+  attachmentOffset: {x: 0, y: 0.44, z: 0}
 --- !u!64 &3265945202263924685
 MeshCollider:
   m_ObjectHideFlags: 0
