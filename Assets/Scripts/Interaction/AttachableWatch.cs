@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AttachableWatch : SimpleAttachable
 {
-    [SerializeField] Transform hourHand, minuteHand;
+    [SerializeField] Transform hourHand, minuteHand, face;
     [SerializeField] AttachableWatchHand hand;
     [SerializeField] Effect timeResetEffect;
     [SerializeField] GameObject[] dots;
@@ -69,6 +69,14 @@ public class AttachableWatch : SimpleAttachable
         Vector3 minuteEuler = minuteHand.localRotation.eulerAngles;
         Quaternion minuteRoration = Quaternion.Euler(minuteEuler.x, (blendedTime % 1f) * 360f, minuteEuler.z);
         minuteHand.localRotation = minuteRoration;
+    }
+
+    protected override void SetMouseRaycastable(bool raycastable)
+    {
+        base.SetMouseRaycastable(raycastable);
+        hourHand.gameObject.layer = raycastable ? 0 : Physics.IgnoreRaycastLayer;
+        face.gameObject.layer = raycastable ? 0 : Physics.IgnoreRaycastLayer;
+
     }
 
     internal void UpdateWatchTimeByHand(float targetTime)

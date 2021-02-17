@@ -295,8 +295,10 @@ MonoBehaviour:
   attachEffect: {fileID: 0}
   hourHand: {fileID: 1313404300562839493}
   minuteHand: {fileID: 1359431363991232568}
+  face: {fileID: 7060511884355304817}
   hand: {fileID: 3140347984316489035}
   timeResetEffect: {fileID: 11400000, guid: f7afbacf1a937bc4cadb194ec8801afb, type: 2}
+  dots: []
   defaultCursorSpeed: 180
   resetCursorSpeed: 360
 --- !u!54 &7011348852482894634
