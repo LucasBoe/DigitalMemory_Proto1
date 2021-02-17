@@ -7,12 +7,13 @@ public class TimeSetListener : TimeListener
 {
     bool listen;
     int lastSet = 0;
-    protected override void OnTimeChanged(int newTime)
+    AnimatorStateInfo last;
+    protected override void OnTimeUpdate(float newTime)
     {
         if (lastSet != newTime)
             listen = true;
 
-        base.OnTimeChanged(newTime);
+        base.OnTimeUpdate(newTime);
     }
 
     private void Update()
@@ -20,12 +21,18 @@ public class TimeSetListener : TimeListener
         if (listen)
         {
             AnimatorStateInfo current = animator.GetCurrentAnimatorStateInfo(0);
-
-            if (current.IsName("Set Time"))
+            if (last.shortNameHash != current.shortNameHash)
             {
-                listen = false;
-                int time = GetTimeFromTagHash(current.tagHash);
-                Game.TimeHandler.ForceTimeSet(time);
+                if (current.IsName("Set Time"))
+                {
+                    listen = false;
+                    int time = GetTimeFromTagHash(current.tagHash);
+
+                    if ((int)Game.TimeHandler.Time != time)
+                        Game.TimeHandler.ForceTimeSet(time);
+                }
+
+                last = current;
             }
 
         }

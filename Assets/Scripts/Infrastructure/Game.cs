@@ -68,6 +68,14 @@ public class Game : MonoBehaviour
         }
     }
 
+    public static MouseInteractor MouseInteractor
+    {
+        get
+        {
+            return MouseInteractor.GetInstance();
+        }
+    }
+
     private void Start()
     {
         //Initialize Default Objects
