@@ -7,12 +7,12 @@ public class TimeSetListener : TimeListener
 {
     bool listen;
     int lastSet = 0;
-    protected override void OnTimeChanged(int newTime)
+    protected override void OnTimeUpdate(float newTime)
     {
         if (lastSet != newTime)
             listen = true;
 
-        base.OnTimeChanged(newTime);
+        base.OnTimeUpdate(newTime);
     }
 
     private void Update()

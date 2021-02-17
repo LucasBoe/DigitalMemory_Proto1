@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseInteractor : MonoBehaviour
+public class MouseInteractor : Singleton<MouseInteractor>
 {
     [SerializeField] LayerMask ignoreRaycast;
     [SerializeField] Effect onHoverDragableEnter, onHoverDragableExit;
@@ -89,7 +89,6 @@ public class MouseInteractor : MonoBehaviour
         //Mouse
         if (Input.GetMouseButtonDown(0))
         {
-
             if (dragable != null && dragable.IsDragable())
                 StartDrag(dragable, attachable);
             else if (clickable != null && clickable.IsClickable())
@@ -154,6 +153,11 @@ public class MouseInteractor : MonoBehaviour
         currentAttachable = null;
         currentDrag = null;
         dragable.EndDrag(point + dragable.GetEndDragYOffset() * Vector3.up);
+    }
+
+    public void ForceEndDrag()
+    {
+        EndDrag(currentDrag, Vector3.zero);
     }
 
     private void Attach(IAttachable attachable, IAttacher attacher)

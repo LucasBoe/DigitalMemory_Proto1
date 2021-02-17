@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class TimeHandler : Singleton<TimeHandler>
 {
-    [SerializeField] private int time, timeMin, timeMax, timeStart, timeEnd;
+    [SerializeField] private float time, timeMin, timeMax, timeStart, timeEnd;
 
     [SerializeField] AudioClip rearrangeClip;
 
-    public event System.Action<int> OnTimeChanged;
+    public event System.Action<float> OnTimeUpdate;
+    public event System.Action<float> OnTimeChange;
+    public event System.Action<float> OnForceTimeReset;
 
     public void StartNewSequence(Sequence newSequence, bool startFromBeginning = true)
     {
@@ -20,7 +22,8 @@ public class TimeHandler : Singleton<TimeHandler>
         timeEnd = newSequence.endTime;
 
         time = startFromBeginning ? newSequence.startTime : newSequence.startReversedTime;
-        OnTimeChanged(time);
+        OnTimeUpdate(time);
+        OnTimeChange(time);
     }
 
     public void IncreaseTime(int amount)
@@ -29,19 +32,26 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             time += amount;
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
-            OnTimeChanged(time);
+            OnTimeUpdate(time);
+            OnTimeChange(time);
         }
 
         if (time + amount >= timeMax)
             Game.SequenceHandler.TryPlayAfter();
     }
 
-    public void ForceTimeSet(int newTime)
+    public void ForceTimeSet(float newTime)
     {
         Debug.Log("Set Time to: " + newTime);
 
         time = newTime;
-        OnTimeChanged(newTime);
+        OnTimeUpdate(newTime);
+        OnForceTimeReset(newTime);
+    }
+    internal void MoveHand(float newTime)
+    {
+        time = newTime;
+        OnTimeUpdate(newTime);
     }
 
     public void DecreaseTime(int amount)
@@ -50,10 +60,13 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             time -= amount;
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
-            OnTimeChanged(time);
+            OnTimeUpdate(time);
+            OnTimeChange(time);
         }
 
         if (time <= timeMin)
             Game.SequenceHandler.TryPlayBefore();
     }
+
+    
 }

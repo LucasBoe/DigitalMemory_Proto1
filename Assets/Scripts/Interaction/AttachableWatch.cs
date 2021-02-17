@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,48 +6,38 @@ using UnityEngine;
 public class AttachableWatch : SimpleAttachable
 {
     [SerializeField] Transform hourHand, minuteHand;
-    [SerializeField] AnimationCurve timeBlendingCurve;
+    [SerializeField] AttachableWatchHand hand;
+    float time, targetTime;
+    bool moves = false;
 
-    float currentTime, targetTime;
-    bool isBlending = false;
-    float blendStartTime, blendEndTime, blendedTime;
+    float cursorSpeed = 90f;
+    [SerializeField] float defaultCursorSpeed = 90f, resetCursorSpeed = 180f;
 
     private void OnEnable()
     {
-        Game.TimeHandler.OnTimeChanged += OnTimeChanged;
+        Game.TimeHandler.OnForceTimeReset += OnForceTimeReset;
+        Game.TimeHandler.OnTimeChange += OnTimeChange;
     }
 
     private void OnDisable()
     {
-        Game.TimeHandler.OnTimeChanged -= OnTimeChanged;
+        Game.TimeHandler.OnForceTimeReset -= OnForceTimeReset;
+        Game.TimeHandler.OnTimeChange -= OnTimeChange;
     }
 
-    private void OnTimeChanged(int newTime)
+    private void OnForceTimeReset(float newTime)
     {
-        if (isBlending)
-            currentTime = blendedTime;
-
-        blendStartTime = Time.time;
-        blendEndTime = blendStartTime + timeBlendingCurve.keys[timeBlendingCurve.length - 1].time;
         targetTime = newTime;
-        isBlending = true;
+        moves = true;
+        cursorSpeed = resetCursorSpeed;
+        if (hand.IsDragging)
+            Game.MouseInteractor.ForceEndDrag();
     }
 
-    private void Update()
+    private void OnTimeChange(float newTime)
     {
-        if (isBlending)
-        {
-            float alpha = timeBlendingCurve.Evaluate(Time.time - blendStartTime);
-            blendedTime = Mathf.Lerp(currentTime, targetTime, alpha);
-            SetVisualsForTime(blendedTime);
-
-            if (Time.time >= blendEndTime)
-            {
-                isBlending = false;
-                currentTime = targetTime;
-                SetVisualsForTime(currentTime);
-            }
-        }
+        targetTime = newTime;
+        moves = true;
     }
 
     private void SetVisualsForTime(float blendedTime)
@@ -58,5 +49,27 @@ public class AttachableWatch : SimpleAttachable
         Vector3 minuteEuler = minuteHand.localRotation.eulerAngles;
         Quaternion minuteRoration = Quaternion.Euler(minuteEuler.x, (blendedTime % 1f) * 360f, minuteEuler.z);
         minuteHand.localRotation = minuteRoration;
+    }
+
+    internal void UpdateWatchTimeByHand(float targetTime)
+    {
+        this.targetTime = targetTime;
+        moves = true;
+    }
+
+    private void Update()
+    {
+        if (moves)
+        {
+            time = Mathf.MoveTowardsAngle(time * 30f, targetTime * 30f, Time.deltaTime * cursorSpeed) / 30f;
+            Game.TimeHandler.MoveHand(time);
+            SetVisualsForTime(time);
+
+            if (Mathf.Abs(time % 12 - targetTime) < 0.01f)
+            {
+                cursorSpeed = defaultCursorSpeed;
+                moves = false;
+            }
+        }
     }
 }

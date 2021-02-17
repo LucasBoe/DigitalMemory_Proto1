@@ -21,19 +21,19 @@ public class DaylightTimeAdapter : MonoBehaviour
 
     private void OnEnable()
     {
-        Game.TimeHandler.OnTimeChanged += OnTimeChanged;
+        Game.TimeHandler.OnTimeUpdate += OnTimeUpdate;
     }
 
     private void OnDisable()
     {
-        Game.TimeHandler.OnTimeChanged -= OnTimeChanged;
+        Game.TimeHandler.OnTimeUpdate -= OnTimeUpdate;
     }
 
 
     private void Start()
     {
         myEuler = gameObject.transform.localRotation.eulerAngles;
-        OnTimeChanged(0);
+        OnTimeUpdate(0);
     }
 
     private void Update()
@@ -53,7 +53,7 @@ public class DaylightTimeAdapter : MonoBehaviour
     }
 
 
-    private void OnTimeChanged(int currentTime)
+    private void OnTimeUpdate(float currentTime)
     {
        targetRotation = Quaternion.Euler(((currentTime % 24f) / 24) * 360f + dayLightAngleOffset, myEuler.y, myEuler.z);
     }
