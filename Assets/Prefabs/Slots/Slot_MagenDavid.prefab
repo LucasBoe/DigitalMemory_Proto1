@@ -61,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1272160966522920478, guid: b53ea43f5273a5f49a0427d0234e1014, type: 3}
   - {fileID: -7805965318761107941, guid: b53ea43f5273a5f49a0427d0234e1014, type: 3}
+  - {fileID: 1272160966522920478, guid: b53ea43f5273a5f49a0427d0234e1014, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentName: Jew
   isAttached: 0
+  attachmentOffset: {x: 0, y: 0, z: 0}
 --- !u!64 &3265945202263924685
 MeshCollider:
   m_ObjectHideFlags: 0
