@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentName: Watch
   isAttached: 0
+  attachmentOffset: {x: 0, y: 0.16, z: 0}
   goBackInTimeArrow: {fileID: 0}
 --- !u!1001 &1667285399806541571
 PrefabInstance:
