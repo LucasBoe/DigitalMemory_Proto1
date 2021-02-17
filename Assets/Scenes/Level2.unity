@@ -1139,30 +1139,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
-    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: endTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: maxTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: minTime
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: startTime
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 209786544, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: startReversedTime
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2659477226311725771, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7520979292463453806, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_Name
       value: Sequence1
@@ -1177,7 +1153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520979292463453807, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.66
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7520979292463453807, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_LocalPosition.z
