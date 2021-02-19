@@ -23,7 +23,7 @@ public class Attacher : MonoBehaviour, IAttacher
 
     private void Start()
     {
-        OnChangeAttached(isAttached);
+        OnChangeAttached?.Invoke(isAttached);
     }
 
     public bool CanAttach(string attachmentName)
