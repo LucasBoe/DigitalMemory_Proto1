@@ -148,6 +148,7 @@ MonoBehaviour:
   isAttached: 0
   defaultParent: {fileID: 0}
   attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+  detachEffect: {fileID: 11400000, guid: 52e486de4271262418500a768e97e937, type: 2}
 --- !u!54 &2346828564194578385
 Rigidbody:
   m_ObjectHideFlags: 0

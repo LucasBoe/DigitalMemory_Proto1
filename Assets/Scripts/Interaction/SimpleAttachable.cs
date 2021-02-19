@@ -22,7 +22,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     [SerializeField] private Transform defaultParent;
 
     [Expandable]
-    [SerializeField] protected Effect attachEffect;
+    [SerializeField] protected Effect attachEffect, detachEffect;
 
     public void Attach(IAttacher toAttachTo)
     {
@@ -51,6 +51,8 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 
         if (isAttached)
         {
+            Game.EffectHandler.Play(detachEffect, gameObject);
+
             isAttached = false;
             if (defaultParent != null)
                 transform.parent = defaultParent;
