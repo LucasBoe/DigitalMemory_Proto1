@@ -49,7 +49,7 @@ public class IsAttachedConditioner : MonoBehaviour
         if (animator != null)
             animator.SetBool(variableName, isAttached);
 
-        if ((playEffectsOnlyAtCertainTime && Game.TimeHandler.Time < timeMaxToPlayEffects && Game.TimeHandler.Time > timeMinToPlayEffects) || !playEffectsOnlyAtCertainTime)
+        if ((playEffectsOnlyAtTime && Game.TimeHandler.Time < timeMaxToPlayEffects && Game.TimeHandler.Time > timeMinToPlayEffects) || !playEffectsOnlyAtTime)
             Game.EffectHandler.Play(isAttached ? onAttachEffect : onDetachEffect, gameObject);
     }
 }
