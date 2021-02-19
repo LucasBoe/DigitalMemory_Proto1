@@ -13,10 +13,11 @@ public class CloseupHandler : Singleton<CloseupHandler>
     Quaternion targetRotation;
 
     [SerializeField] Transform closeupTransform;
+    [SerializeField] AudioClip startCloseupSound, endCloseupSound;
     public void StartCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("start closeup");
-
+        Game.SoundPlayer.Play(startCloseupSound, randomPitchRange: 0.15f);
         currentCloseupable.OnStartCloseup();
         originalPosition = currentCloseupable.GetPosition();
         originalRotation = currentCloseupable.GetRotation();
@@ -25,7 +26,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     public void EndCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("end closeup");
-
+        Game.SoundPlayer.Play(endCloseupSound, randomPitchRange: 0.15f);
         StartCoroutine(PanBackRoutine(currentCloseupable));
     }
     public void UpdateCloseup(ICloseupable currentCloseupable)

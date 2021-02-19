@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeupTransform: {fileID: 205205498728818321}
+  startCloseupSound: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
+  endCloseupSound: {fileID: 8300000, guid: d17b39ae737ba294680b9785313e89c9, type: 3}
 --- !u!1 &1221530314861160374
 GameObject:
   m_ObjectHideFlags: 0
