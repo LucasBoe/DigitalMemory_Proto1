@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502667, g: 0.37139323, b: 0.49600998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1234,6 +1234,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 458560926, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458560926, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 458560926, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 505226510, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1242,6 +1254,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 505226510, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505226510, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 505226510, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 845998913, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1250,6 +1274,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 845998913, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 845998913, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 845998913, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1061856863, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1258,6 +1294,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1061856863, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061856863, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061856863, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1222303832, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1266,6 +1314,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1222303832, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222303832, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222303832, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1294630768, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1274,6 +1334,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1294630768, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294630768, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294630768, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1367090182, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1282,6 +1354,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1367090182, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367090182, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367090182, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1421511118, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1290,6 +1374,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1421511118, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421511118, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421511118, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1443102328, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1298,6 +1394,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1443102328, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443102328, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443102328, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1584317746, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1306,6 +1414,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 1584317746, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584317746, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584317746, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2031261976, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: onAttachEffect
       value: 
@@ -1314,6 +1434,18 @@ PrefabInstance:
       propertyPath: onDetachEffect
       value: 
       objectReference: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+    - target: {fileID: 2031261976, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMaxToPlayEffects
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031261976, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: timeMinToPlayEffects
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031261976, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
+      propertyPath: playEffectsOnlyAtTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 705761850608662712, guid: 1b9608bcd10370f4590d6fb100b1dccd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.34
