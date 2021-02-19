@@ -10,6 +10,9 @@ public class CameraController : Singleton<CameraController>
     // Update is called once per frame
     void Update()
     {
+        if (Game.MouseInteractor.IsInCloseup)
+            return;
+
         var x = Input.mousePosition.x / Screen.width;
         var y = Input.mousePosition.y / Screen.height;
 
