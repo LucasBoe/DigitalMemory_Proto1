@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,13 @@ public class IsAttachedConditioner : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string variableName;
+
+
     [SerializeField] Effect onAttachEffect, onDetachEffect;
+    [SerializeField] bool playEffectsOnlyAtTime;
+    [SerializeField] [ShowIf("playEffectsOnlyAtTime")] float timeMinToPlayEffects;
+    [SerializeField] [ShowIf("playEffectsOnlyAtTime")] float timeMaxToPlayEffects;
+
     Attacher attacher;
     private void OnEnable()
     {
@@ -42,6 +49,7 @@ public class IsAttachedConditioner : MonoBehaviour
         if (animator != null)
             animator.SetBool(variableName, isAttached);
 
-        Game.EffectHandler.Play(isAttached ? onAttachEffect : onDetachEffect, gameObject);
+        if ((playEffectsOnlyAtCertainTime && Game.TimeHandler.Time < timeMaxToPlayEffects && Game.TimeHandler.Time > timeMinToPlayEffects) || !playEffectsOnlyAtCertainTime)
+            Game.EffectHandler.Play(isAttached ? onAttachEffect : onDetachEffect, gameObject);
     }
 }
