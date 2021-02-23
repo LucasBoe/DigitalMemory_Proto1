@@ -26,7 +26,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     [SerializeField] private Transform defaultParent;
 
     [Expandable]
-    [SerializeField] protected Effect attachEffect, detachEffect;
+    [SerializeField] protected Effect attachEffect, detachEffect, potentialSlotEffect;
 
     public event Action OnStartCloseupEvent;
     public event Action OnEndCloseupEvent;
@@ -50,6 +50,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         gameObject.layer = 0;
 
         Game.EffectHandler.Play(attachEffect, gameObject);
+        Game.EffectHandler.StopOnAllPotentialAttachables(attachment);
     }
 
     public override void StartDrag()
@@ -59,6 +60,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         if (isAttached)
         {
             Game.EffectHandler.Play(detachEffect, gameObject);
+            Game.EffectHandler.PlayOnAllPotentialAttachables(potentialSlotEffect, attachment);
 
             isAttached = false;
             if (defaultParent != null)
