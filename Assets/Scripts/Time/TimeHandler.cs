@@ -23,8 +23,8 @@ public class TimeHandler : Singleton<TimeHandler>
         timeEnd = newSequence.endTime;
 
         time = startFromBeginning ? newSequence.startTime : newSequence.startReversedTime;
-        OnTimeUpdate(time);
-        OnTimeChange(time);
+        OnTimeUpdate?.Invoke(time);
+        OnTimeChange?.Invoke(time);
     }
 
     public void IncreaseTime(int amount)
@@ -33,8 +33,8 @@ public class TimeHandler : Singleton<TimeHandler>
         {
             time += amount;
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
-            OnTimeUpdate(time);
-            OnTimeChange(time);
+            OnTimeUpdate?.Invoke(time);
+            OnTimeChange?.Invoke(time);
         }
 
         if (time + amount >= timeMax)
@@ -46,8 +46,8 @@ public class TimeHandler : Singleton<TimeHandler>
         Debug.Log("Set Time to: " + newTime);
 
         time = newTime;
-        OnTimeUpdate(newTime);
-        OnForceTimeReset(newTime);
+        OnTimeUpdate?.Invoke(newTime);
+        OnForceTimeReset?.Invoke(newTime);
     }
     internal void MoveHand(float newTime)
     {

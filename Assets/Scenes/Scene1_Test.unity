@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c7c12741ae7754ab88aa6c23f169d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 1366054377}
+  current: {fileID: 1323678898}
 --- !u!4 &25274985
 Transform:
   m_ObjectHideFlags: 0
@@ -751,6 +751,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1323678898}
     - target: {fileID: 1746197125771249768, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: attachEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+    - target: {fileID: 1746197125771249768, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: resetCursorSpeed
       value: 360
       objectReference: {fileID: 0}
@@ -764,7 +768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4825841944790863140, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4825841944790863141, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_RootOrder
@@ -810,7 +814,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Size.x
+      value: 2.1355789
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4307825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Size.z
+      value: 2.1684284
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.07701409
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.39039126
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_Center.z
+      value: -0.06084156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 360448968973184134, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
 --- !u!114 &1366054377 stripped
 MonoBehaviour:
@@ -1295,7 +1328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6019594772035041710, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963888878746999007, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: m_Enabled
