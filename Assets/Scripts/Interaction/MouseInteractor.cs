@@ -8,8 +8,9 @@ public class MouseInteractor : Singleton<MouseInteractor>
     [SerializeField] LayerMask ignoreRaycast;
     [SerializeField] Effect onHoverDragableEnter, onHoverDragableExit;
 
-    GameObject currenHoverTEMP, currentDragHover;
+    GameObject currenHoverTEMP;
 
+    IHoverable currentHover;
     IDragable currentDrag;
     IAttachable currentAttachable;
     ICloseupable currentCloseupable;
@@ -84,19 +85,25 @@ public class MouseInteractor : Singleton<MouseInteractor>
         IAttachable attachable = hit.collider.GetComponent<IAttachable>();
 
         //Hover
-        GameObject newDragHover = null;
+        IHoverable newDragHover = null;
         if (dragable != null)
-            newDragHover = hit.collider.gameObject;
+            newDragHover = hit.collider.GetComponent<IHoverable>();
 
-        if (currentDragHover != newDragHover)
+        if (currentHover != newDragHover)
         {
-            if (currentDragHover != null)
-                Game.EffectHandler.Play(onHoverDragableExit, currentDragHover);
+            if (currentHover != null)
+            {
+                Game.EffectHandler.Play(onHoverDragableExit, currentHover.GetGameObject());
+                currentHover.EndHover();
+            }
 
             if (newDragHover != null)
-                Game.EffectHandler.Play(onHoverDragableEnter, newDragHover);
+            {
+                Game.EffectHandler.Play(onHoverDragableEnter, newDragHover.GetGameObject());
+                newDragHover.StartHover();
+            }
 
-            currentDragHover = newDragHover;
+            currentHover = newDragHover;
         }
 
         //Mouse
@@ -175,8 +182,12 @@ public class MouseInteractor : Singleton<MouseInteractor>
 
     public void ForceEndHover()
     {
-        if (currentDragHover != null)
-            Game.EffectHandler.Play(onHoverDragableExit, currentDragHover);
+        if (currentHover != null)
+        {
+            Game.EffectHandler.Play(onHoverDragableExit, currentHover.GetGameObject());
+            currentHover.EndHover();
+            currentHover = null;
+        }
     }
 
     private void Attach(IAttachable attachable, IAttacher attacher)

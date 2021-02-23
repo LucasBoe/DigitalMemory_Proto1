@@ -1,6 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public interface IHoverable
+{
+    void StartHover();
+    void EndHover();
+    event Action OnStartHoverEvent;
+    event Action OnEndHoverEvent;
+    GameObject GetGameObject();
+
+}
 
 public interface IDragable
 {
@@ -18,7 +29,7 @@ public interface IAttachable : IDragable
     IAttacher GetCurrentAttached();
 }
 
-public class SimpleDragable : MonoBehaviour, IDragable
+public class SimpleDragable : MonoBehaviour, IDragable, IHoverable
 {
     [SerializeField] protected Rigidbody rigidbody;
     [SerializeField] private float YOffsetOnDrop;
@@ -26,6 +37,9 @@ public class SimpleDragable : MonoBehaviour, IDragable
 
 
     protected bool isBeeingDragged = false;
+
+    public event Action OnStartHoverEvent;
+    public event Action OnEndHoverEvent;
 
     protected virtual void SetPhysicsActive(bool active)
     {
@@ -67,5 +81,20 @@ public class SimpleDragable : MonoBehaviour, IDragable
     public float GetEndDragYOffset()
     {
         return YOffsetOnDrop;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
+    public void StartHover()
+    {
+        OnStartHoverEvent?.Invoke();
+    }
+
+    public void EndHover()
+    {
+        OnEndHoverEvent?.Invoke();
     }
 }

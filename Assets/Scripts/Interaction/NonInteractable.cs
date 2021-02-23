@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class NonInteractable : MonoBehaviour,IClickable
+public class NonInteractable : MonoBehaviour, IClickable
 {
-    [Expandable][SerializeField] Effect nonInteractable;
+    [Expandable] [SerializeField] Effect nonInteractable;
 
     [SerializeField] float shakeSpeed = 30f, shakeAmount = 0.05f, shakeDuration = 0.5f;
 
@@ -22,12 +22,13 @@ public class NonInteractable : MonoBehaviour,IClickable
         return true;
     }
 
-    private IEnumerator Shake() {
+    private IEnumerator Shake()
+    {
 
         float elapsed = 0f;
         Vector3 myZ = gameObject.transform.position;
 
-        while (elapsed < shakeDuration);
+        while (elapsed < shakeDuration) ;
         {
             elapsed += Time.deltaTime;
 

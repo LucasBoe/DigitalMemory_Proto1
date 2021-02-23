@@ -35,8 +35,6 @@ public class CloseupHandler : Singleton<CloseupHandler>
     }
     public void UpdateCloseup(ICloseupable currentCloseupable)
     {
-        Debug.Log("update closeup");
-
         targetPosition = closeupTransform.position;
 
         if (Input.GetMouseButton(0))

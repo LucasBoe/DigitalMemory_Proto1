@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2329604380044594966}
   - component: {fileID: 2346828564194578385}
   - component: {fileID: 6387939553956852595}
+  - component: {fileID: 8754049251393306733}
   m_Layer: 0
   m_Name: JewGroup_Attachable
   m_TagString: Untagged
@@ -181,6 +182,20 @@ CapsuleCollider:
   m_Height: 3.0579715
   m_Direction: 1
   m_Center: {x: 0, y: 0.68536067, z: 0}
+--- !u!114 &8754049251393306733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656760927689259884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4e57a8f378b5844beef60eb4c3d9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverText: {fileID: 11400000, guid: 1dd4bd9f100c8a24395071f24351a28d, type: 2}
+  closeupText: {fileID: 11400000, guid: 6080261e48fc4b244a2a786d4ef30095, type: 2}
 --- !u!1 &8046622256810846863
 GameObject:
   m_ObjectHideFlags: 0
