@@ -51,7 +51,7 @@ public class SimpleDragable : MonoBehaviour, IDragable
         SetMouseRaycastable(false);
         Game.SoundPlayer.Play(startDragClip, gameObject);
     }
-    public void EndDrag(Vector3 position)
+    public virtual void EndDrag(Vector3 position)
     {
         isBeeingDragged = false;
         transform.position = position;

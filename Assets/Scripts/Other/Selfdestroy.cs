@@ -19,7 +19,7 @@ public class Selfdestroy : MonoBehaviour
         Invoke("Destroy",delay);
     }
 
-    private void Destroy()
+    public void Destroy()
     {
         Destroy(gameObject);
     }

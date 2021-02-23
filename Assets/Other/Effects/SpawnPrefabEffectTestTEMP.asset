@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8b6a931fb936dc4d85362f97739cf34, type: 3}
-  m_Name: StopAllEffects
+  m_Name: SpawnPrefabEffectTestTEMP
   m_EditorClassIdentifier: 
   PlaySoundEffect: 0
   soundEffect:
@@ -18,13 +18,13 @@ MonoBehaviour:
     playFromOrigin: 0
     volume: 1
     randomPitchRange: 0
-  PlayVisualEffect: 0
+  PlayVisualEffect: 1
   visualEffect:
-    prefab: {fileID: 0}
-    spawnRelativeToOrigin: 0
+    prefab: {fileID: 2649554724362190629, guid: 9e4c383fde58c8d48ada2408bedda7e4, type: 3}
+    spawnRelativeToOrigin: 1
     spawnOffset: {x: 0, y: 0, z: 0}
     destroyDelay: 0
-  ClearVisualEffect: 1
+  ClearVisualEffect: 0
   PlayChangeShaderEffect: 0
   changeShaderEffect:
     shader: {fileID: 0}
@@ -40,4 +40,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  ClearPulsingEffect: 1
+  ClearPulsingEffect: 0

@@ -11,9 +11,12 @@ public class Effect : ScriptableObject
     [Space]
 
 
+    [ShowIf("NotClearVisualEffect")]
     public bool PlayVisualEffect;
     [ShowIf("PlayVisualEffect")] [Header("VisualEffect")] [SerializeField] VisualEffectData visualEffect;
+    [ShowIf("NotPlayVisualEffect")] [Space] public bool ClearVisualEffect;
     [Space]
+    
 
     public bool PlayChangeShaderEffect;
     [ShowIf("PlayChangeShaderEffect")] [Header("ChangeShader")] [SerializeField] ChangeShaderEffectData changeShaderEffect;
@@ -27,11 +30,19 @@ public class Effect : ScriptableObject
     public bool NotPlayPulsingEffect() { return !PlayPulsingEffect; }
     public bool NotClearPulsingEffect() { return !ClearPulsingEffect; }
 
+    public bool NotPlayVisualEffect() { return !PlayVisualEffect; }
+    public bool NotClearVisualEffect() { return !ClearVisualEffect; }
+
 
     public void Play(GameObject origin)
     {
+        Debug.Log("Play Effect: " + this.name);
+
         if (PlaySoundEffect)
             soundEffect.PlayEffect(origin);
+
+        if (ClearVisualEffect)
+            ClearAllVisualEffectsFrom(origin);
 
         if (PlayVisualEffect)
             visualEffect.PlayEffect(origin);
@@ -52,6 +63,14 @@ public class Effect : ScriptableObject
         foreach (PulsingEffector pulsing in origin.GetComponents<PulsingEffector>())
         {
             pulsing.Stop();
+        }
+    }
+
+    private void ClearAllVisualEffectsFrom(GameObject origin)
+    {
+        foreach (VisualEffectInstance effect in origin.GetComponentsInChildren<VisualEffectInstance>())
+        {
+            effect.Destroy();
         }
     }
 }
@@ -82,8 +101,8 @@ public class VisualEffectData : EffectData
     public override void PlayEffect(GameObject origin)
     {
         Vector3 spawnPosition = (spawnRelativeToOrigin ? origin.transform.position : Vector3.zero) + spawnOffset;
-        Transform effectInstance = GameObject.Instantiate(prefab, spawnPosition, Quaternion.identity);
-        effectInstance.gameObject.AddComponent<Selfdestroy>().DestroyDelayed(destroyDelay);
+        Transform effectInstance = GameObject.Instantiate(prefab, spawnPosition, Quaternion.identity, origin.transform);
+        effectInstance.gameObject.AddComponent<VisualEffectInstance>().DestroyDelayed(destroyDelay);
     }
 }
 

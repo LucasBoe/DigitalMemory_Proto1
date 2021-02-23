@@ -55,12 +55,12 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 
     public override void StartDrag()
     {
+        Game.EffectHandler.PlayOnAllPotentialAttachables(potentialSlotEffect, attachment);
         base.StartDrag();
 
         if (isAttached)
         {
             Game.EffectHandler.Play(detachEffect, gameObject);
-            Game.EffectHandler.PlayOnAllPotentialAttachables(potentialSlotEffect, attachment);
 
             isAttached = false;
             if (defaultParent != null)
@@ -71,6 +71,12 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
                 Debug.LogWarning("No default parent defined unparenting impossible, please define one or ignore this warning.");
             }
         }
+    }
+
+    public override void EndDrag(Vector3 position)
+    {
+        base.EndDrag(position);
+        Game.EffectHandler.StopOnAllPotentialAttachables(attachment);
     }
     public string GetAttachment()
     {

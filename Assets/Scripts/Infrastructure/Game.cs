@@ -56,7 +56,7 @@ public class Game : MonoBehaviour
     {
         get
         {
-            return EffectHandler.GetInstance();
+            return EffectHandler.GetInstance(usePrefab: true);
         }
     }
 
