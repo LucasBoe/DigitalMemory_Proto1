@@ -35,10 +35,11 @@ public class TimeHandler : Singleton<TimeHandler>
             Game.SoundPlayer.Play(rearrangeClip, null, volume: 0.25f, randomPitchRange: 0.5f);
             OnTimeUpdate?.Invoke(time);
             OnTimeChange?.Invoke(time);
-        }
-
-        if (time + amount >= timeMax)
+        } else if (time + amount >= timeMax)
+        {
+            Debug.Log("time: " + time + " +" + amount + " = " + (time + amount) + " /  " + timeMax);
             Game.SequenceHandler.TryPlayAfter();
+        }
     }
 
     public void ForceTimeSet(float newTime)
@@ -64,10 +65,10 @@ public class TimeHandler : Singleton<TimeHandler>
             OnTimeUpdate(time);
             OnTimeChange(time);
         }
-
-        if (time <= timeMin)
-            Game.SequenceHandler.TryPlayBefore();
+        else
+        {
+            if (time <= timeMin)
+                Game.SequenceHandler.TryPlayBefore();
+        }
     }
-
-    
 }

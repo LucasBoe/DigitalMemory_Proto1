@@ -38,6 +38,7 @@ public class SequenceHandler : Singleton<SequenceHandler>
 
     private void StartNewSequence(bool startFromBeginning)
     {
+        Debug.Log("START NEW SEQUENCE: " + current.name);
         Game.TimeHandler.StartNewSequence(current, startFromBeginning);
         OnStartNewSeqeunce?.Invoke(current);
     }
