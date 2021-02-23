@@ -14,7 +14,7 @@ public class MouseInteractor : Singleton<MouseInteractor>
     IAttachable currentAttachable;
     ICloseupable currentCloseupable;
 
-    
+
 
     public bool IsInCloseup { get => (currentCloseupable != null); }
     public bool IsDragging { get => (currentDrag != null); }
@@ -22,18 +22,20 @@ public class MouseInteractor : Singleton<MouseInteractor>
 
     private void Update()
     {
-        if (IsInCloseup)
-        {
-            UpdateCloseup();
-        }
-        else
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 100, ~ignoreRaycast))
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, 100, ~ignoreRaycast))
+        {
+            currenHoverTEMP = hit.collider.gameObject;
+
+            if (IsInCloseup)
             {
-                currenHoverTEMP = hit.collider.gameObject;
+                UpdateCloseup(hit);
+            }
+            else
+            {
 
                 if (IsDragging)
                 {
@@ -44,14 +46,14 @@ public class MouseInteractor : Singleton<MouseInteractor>
                     UpdateNonDrag(hit);
                 }
             }
-            else
-            {
-                currenHoverTEMP = null;
-            }
+        }
+        else
+        {
+            currenHoverTEMP = null;
         }
     }
 
-    private void UpdateCloseup()
+    private void UpdateCloseup(RaycastHit hit)
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -61,6 +63,17 @@ public class MouseInteractor : Singleton<MouseInteractor>
         else
         {
             Game.CloseupHandler.UpdateCloseup(currentCloseupable);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                HiddenAttachable hiddenAttachable = hit.collider.GetComponent<HiddenAttachable>();
+                if (hiddenAttachable != null)
+                {
+                    Game.CloseupHandler.EndCloseup(currentCloseupable);
+                    currentCloseupable = hiddenAttachable;
+                    Game.CloseupHandler.StartCloseup(hiddenAttachable);
+                }
+            }
         }
     }
 

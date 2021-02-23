@@ -14,6 +14,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
 
     Vector2 mousePositionBefore;
 
+    [SerializeField] float closeupSpeed;
     [SerializeField] Transform closeupTransform;
     [SerializeField] AudioClip startCloseupSound, endCloseupSound;
     public void StartCloseup(ICloseupable currentCloseupable)
@@ -65,7 +66,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     {
         if (lerp)
         {
-            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * 100);
+            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * closeupSpeed);
             Quaternion rot = Quaternion.Euler(Vector3.MoveTowards(closeupable.GetRotation().eulerAngles, tRot.eulerAngles, Time.deltaTime * 100));
             closeupable.UpdatePositionAndRotation(pos, rot);
         }

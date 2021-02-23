@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e1ef3ef2508114c88f84de22cabb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeupSpeed: 50
   closeupTransform: {fileID: 205205498728818321}
   startCloseupSound: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
   endCloseupSound: {fileID: 8300000, guid: d17b39ae737ba294680b9785313e89c9, type: 3}
