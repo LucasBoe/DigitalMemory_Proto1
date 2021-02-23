@@ -40,7 +40,11 @@ public class CloseupHandler : Singleton<CloseupHandler>
         targetPosition = closeupTransform.position;
 
         if (Input.GetMouseButton(0))
-            targetRotation = currentCloseupable.GetRotation() * Quaternion.Euler(Input.mousePosition.y - mousePositionBefore.y, mousePositionBefore.x - Input.mousePosition.x, 0);
+        {
+            var x = mousePositionBefore.x - Input.mousePosition.x;
+            var y = Input.mousePosition.y - mousePositionBefore.y;
+            targetRotation = Quaternion.Euler(-x/2, x/2, y) * currentCloseupable.GetRotation();
+        }
 
         mousePositionBefore = Input.mousePosition;
         UpdatePositionAndRotation(currentCloseupable, targetPosition, targetRotation, Vector3.Distance(targetPosition, currentCloseupable.GetPosition()) > 0.01f);
@@ -66,7 +70,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     {
         if (lerp)
         {
-            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * closeupSpeed);
+            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * 100);
             Quaternion rot = Quaternion.Euler(Vector3.MoveTowards(closeupable.GetRotation().eulerAngles, tRot.eulerAngles, Time.deltaTime * 100));
             closeupable.UpdatePositionAndRotation(pos, rot);
         }
