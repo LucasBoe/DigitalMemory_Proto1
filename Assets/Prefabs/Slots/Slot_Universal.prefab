@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 669582706459952119}
   - component: {fileID: 3363664065575171901}
   - component: {fileID: 3355184912575780796}
-  - component: {fileID: 7558613403821507064}
+  - component: {fileID: 1421457674135595939}
   m_Layer: 0
   m_Name: Slot_Universal
   m_TagString: Untagged
@@ -99,8 +99,8 @@ MonoBehaviour:
   attachmentName: 
   isAttached: 0
   attachmentOffset: {x: 0, y: 0.44, z: 0}
---- !u!64 &7558613403821507064
-MeshCollider:
+--- !u!135 &1421457674135595939
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +109,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3909233067320746374, guid: 00eab7ff640183443b3e1bba7e86cbe0, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.66
+  m_Center: {x: 0, y: 0.15858133, z: 0}
