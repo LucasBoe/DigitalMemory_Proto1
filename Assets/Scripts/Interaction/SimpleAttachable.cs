@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public interface ICloseupable
     void UpdatePositionAndRotation(Vector3 pos, Quaternion rot);
     void OnStartCloseup();
     void OnEndCloseup();
+
+    event Action OnStartCloseupEvent;
+    event Action OnEndCloseupEvent;
 }
 
 
@@ -22,7 +26,10 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     [SerializeField] private Transform defaultParent;
 
     [Expandable]
-    [SerializeField] protected Effect attachEffect, detachEffect;
+    [SerializeField] protected Effect attachEffect, detachEffect, potentialSlotEffect;
+
+    public event Action OnStartCloseupEvent;
+    public event Action OnEndCloseupEvent;
 
     public void Attach(IAttacher toAttachTo)
     {
@@ -43,6 +50,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         gameObject.layer = 0;
 
         Game.EffectHandler.Play(attachEffect, gameObject);
+        Game.EffectHandler.StopOnAllPotentialAttachables(attachment);
     }
 
     public override void StartDrag()
@@ -52,6 +60,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         if (isAttached)
         {
             Game.EffectHandler.Play(detachEffect, gameObject);
+            Game.EffectHandler.PlayOnAllPotentialAttachables(potentialSlotEffect, attachment);
 
             isAttached = false;
             if (defaultParent != null)
@@ -75,7 +84,6 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
 
         return null;
     }
-
     public Vector3 GetPosition()
     {
         return transform.position;
@@ -92,19 +100,21 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         transform.rotation = rot;
     }
 
-    public void OnStartCloseup()
+    public virtual void OnStartCloseup()
     {
         isInCloseup = true;
         SetPhysicsActive(false);
         SetMouseRaycastable(false);
+        OnStartCloseupEvent?.Invoke();
     }
 
-    public void OnEndCloseup()
+    public virtual void OnEndCloseup()
     {
         isInCloseup = false;
         SetMouseRaycastable(true);
         if (!isAttached)
             SetPhysicsActive(true);
+        OnEndCloseupEvent?.Invoke();
     }
 
     public override bool IsDragable()

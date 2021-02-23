@@ -11,9 +11,9 @@ public class AttacherWatch : Attacher
         if (goBackInTimeArrow != null) goBackInTimeArrow.SetActive(isAttached);
     }
 
-    public override void OnAttach()
+    public override void OnAttach(IAttachable attachable)
     {
-        base.OnAttach();
+        base.OnAttach(attachable);
         if (goBackInTimeArrow != null) goBackInTimeArrow.SetActive(isAttached);
     }
 

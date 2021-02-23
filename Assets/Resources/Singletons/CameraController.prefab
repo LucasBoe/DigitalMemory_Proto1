@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 205205498728818321}
-  m_Father: {fileID: 1221530314861160360}
+  m_Father: {fileID: 5918211630301008714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 60, y: -90, z: 0}
 --- !u!20 &1221530314552803808
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e1ef3ef2508114c88f84de22cabb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeupSpeed: 50
   closeupTransform: {fileID: 205205498728818321}
   startCloseupSound: {fileID: 8300000, guid: 19cf9230df6aadf4ba6e42d9fcfd039f, type: 3}
   endCloseupSound: {fileID: 8300000, guid: d17b39ae737ba294680b9785313e89c9, type: 3}
@@ -179,7 +180,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1221530314552803809}
+  - {fileID: 5918211630301008714}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,8 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b0d0f11a98d914aa49b12f141276ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePosition: {x: 10, y: 25, z: 0}
-  baseRotation: {x: 0, y: 0, z: 0}
   xPosChangeByMouseX:
     serializedVersion: 2
     m_Curve:
@@ -329,6 +328,32 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  lookAround: {fileID: 5918211630301008714}
+  curveRotation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  current: {fileID: 11400000, guid: 0ab8d4c82884765459c2b6f7448f26eb, type: 2}
 --- !u!1 &4224656409083655564
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,5 +382,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1221530314552803809}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4625187556883624791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5918211630301008714}
+  m_Layer: 0
+  m_Name: LookAround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5918211630301008714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625187556883624791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1221530314552803809}
+  m_Father: {fileID: 1221530314861160360}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

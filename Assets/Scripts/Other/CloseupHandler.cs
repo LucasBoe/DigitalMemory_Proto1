@@ -12,12 +12,16 @@ public class CloseupHandler : Singleton<CloseupHandler>
     Vector3 targetPosition;
     Quaternion targetRotation;
 
+    Vector2 mousePositionBefore;
+
+    [SerializeField] float closeupSpeed;
     [SerializeField] Transform closeupTransform;
     [SerializeField] AudioClip startCloseupSound, endCloseupSound;
     public void StartCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("start closeup");
         Game.SoundPlayer.Play(startCloseupSound, randomPitchRange: 0.15f);
+        Game.MouseInteractor.ForceEndHover();
         currentCloseupable.OnStartCloseup();
         originalPosition = currentCloseupable.GetPosition();
         originalRotation = currentCloseupable.GetRotation();
@@ -34,7 +38,11 @@ public class CloseupHandler : Singleton<CloseupHandler>
         Debug.Log("update closeup");
 
         targetPosition = closeupTransform.position;
-        targetRotation = Quaternion.Euler(Input.mousePosition.y, Input.mousePosition.x, 0);
+
+        if (Input.GetMouseButton(0))
+            targetRotation = currentCloseupable.GetRotation() * Quaternion.Euler(Input.mousePosition.y - mousePositionBefore.y, mousePositionBefore.x - Input.mousePosition.x, 0);
+
+        mousePositionBefore = Input.mousePosition;
         UpdatePositionAndRotation(currentCloseupable, targetPosition, targetRotation, Vector3.Distance(targetPosition, currentCloseupable.GetPosition()) > 0.01f);
     }
 
@@ -50,7 +58,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
             UpdatePositionAndRotation(closeupable, tPos, tRot, lerp: true);
         }
 
-        closeupable.UpdatePositionAndRotation(tPos,tRot);
+        closeupable.UpdatePositionAndRotation(tPos, tRot);
         closeupable.OnEndCloseup();
     }
 
@@ -58,7 +66,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     {
         if (lerp)
         {
-            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * 100);
+            Vector3 pos = Vector3.MoveTowards(closeupable.GetPosition(), tPos, Time.deltaTime * closeupSpeed);
             Quaternion rot = Quaternion.Euler(Vector3.MoveTowards(closeupable.GetRotation().eulerAngles, tRot.eulerAngles, Time.deltaTime * 100));
             closeupable.UpdatePositionAndRotation(pos, rot);
         }
