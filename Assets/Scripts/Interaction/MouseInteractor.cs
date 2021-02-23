@@ -160,12 +160,18 @@ public class MouseInteractor : Singleton<MouseInteractor>
         EndDrag(currentDrag, Vector3.zero);
     }
 
+    public void ForceEndHover()
+    {
+        if (currentDragHover != null)
+            Game.EffectHandler.Play(onHoverDragableExit, currentDragHover);
+    }
+
     private void Attach(IAttachable attachable, IAttacher attacher)
     {
         currentAttachable = null;
         currentDrag = null;
 
-        attacher.OnAttach();
+        attacher.OnAttach(attachable);
         attachable.Attach(attacher);
     }
 

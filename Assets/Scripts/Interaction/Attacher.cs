@@ -6,7 +6,7 @@ public interface IAttacher
 {
     bool CanAttach(string attachBehaviour);
     Transform GetTransform();
-    void OnAttach();
+    void OnAttach(IAttachable attachable);
     void OnDetach();
     Vector3 GetPreviewPosition(Vector3 point);
     bool ResetPositionOnAttach();
@@ -19,11 +19,12 @@ public class Attacher : MonoBehaviour, IAttacher
     public string attachmentName;
     [SerializeField] protected bool isAttached;
     [SerializeField] Vector3 attachmentOffset;
-    public event System.Action<bool> OnChangeAttached;
+    public event System.Action<bool, string> OnChangeAttached;
 
     private void Start()
     {
-        OnChangeAttached?.Invoke(isAttached);
+        IAttachable attachable = GetComponentInChildren<IAttachable>();
+        OnChangeAttached?.Invoke(isAttached, attachable != null ? attachable.GetAttachment() : "");
     }
 
     public bool CanAttach(string attachmentName)
@@ -46,16 +47,16 @@ public class Attacher : MonoBehaviour, IAttacher
         return transform;
     }
 
-    public virtual void OnAttach()
+    public virtual void OnAttach(IAttachable attachable)
     {
         isAttached = true;
-        OnChangeAttached?.Invoke(isAttached);
+        OnChangeAttached?.Invoke(isAttached, attachable.GetAttachment());
     }
 
     public virtual void OnDetach()
     {
         isAttached = false;
-        OnChangeAttached?.Invoke(isAttached);
+        OnChangeAttached?.Invoke(isAttached, "");
     }
 
     public bool ResetOrientationOnAttach()
