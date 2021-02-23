@@ -12,6 +12,8 @@ public class CloseupHandler : Singleton<CloseupHandler>
     Vector3 targetPosition;
     Quaternion targetRotation;
 
+    Vector2 mousePositionBefore;
+
     [SerializeField] Transform closeupTransform;
     [SerializeField] AudioClip startCloseupSound, endCloseupSound;
     public void StartCloseup(ICloseupable currentCloseupable)
@@ -35,7 +37,11 @@ public class CloseupHandler : Singleton<CloseupHandler>
         Debug.Log("update closeup");
 
         targetPosition = closeupTransform.position;
-        targetRotation = Quaternion.Euler(Input.mousePosition.y, Input.mousePosition.x, 0);
+
+        if (Input.GetMouseButton(0))
+            targetRotation = currentCloseupable.GetRotation() * Quaternion.Euler(Input.mousePosition.y - mousePositionBefore.y, mousePositionBefore.x - Input.mousePosition.x, 0);
+
+        mousePositionBefore = Input.mousePosition;
         UpdatePositionAndRotation(currentCloseupable, targetPosition, targetRotation, Vector3.Distance(targetPosition, currentCloseupable.GetPosition()) > 0.01f);
     }
 
@@ -51,7 +57,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
             UpdatePositionAndRotation(closeupable, tPos, tRot, lerp: true);
         }
 
-        closeupable.UpdatePositionAndRotation(tPos,tRot);
+        closeupable.UpdatePositionAndRotation(tPos, tRot);
         closeupable.OnEndCloseup();
     }
 
