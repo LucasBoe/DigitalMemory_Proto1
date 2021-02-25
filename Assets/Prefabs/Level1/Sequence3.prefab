@@ -139,10 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  endTime: 15
-  maxTime: 15
+  endTime: 9
+  maxTime: 9
   minTime: -3
-  startReversedTime: 12
+  startReversedTime: 7
   before: {fileID: 0}
   after: {fileID: 0}
   StartDelay: 3
