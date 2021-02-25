@@ -17,7 +17,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: edf78540625b39b4aa02d4ceab949e81, type: 3}
     playFromOrigin: 0
     volume: 1
-    randomPitchRange: 0
+    randomPitchRange: 0.5
   PlayVisualEffect: 0
   visualEffect:
     prefab: {fileID: 0}
