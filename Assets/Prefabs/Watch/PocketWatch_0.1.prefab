@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9180052902404632851}
   - component: {fileID: 6350717566984482982}
   - component: {fileID: 6736376403154705998}
+  - component: {fileID: 2969759510015392551}
   m_Layer: 0
   m_Name: Watch02_LongHand
   m_TagString: Untagged
@@ -173,11 +174,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314461473277181352}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010368405, y: 0.002997396, z: 0.0003172261}
-  m_Center: {x: -0.003866839, y: 0, z: 0.001352816}
+  m_Size: {x: 0.011006466, y: 0.0037387288, z: 0.0003172261}
+  m_Center: {x: -0.004185869, y: 0.0000361678, z: 0.0013528193}
 --- !u!114 &6736376403154705998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,19 @@ MonoBehaviour:
   pin: {fileID: 1504049645529141952}
   pinLocalPositionIn: {x: -0.006884257, y: 0, z: 0.001505}
   pinLocalPositionOut: {x: -0.006884257, y: 0, z: 0.00303}
+--- !u!65 &2969759510015392551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314461473277181352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004319438, y: 0.005376298, z: 0.00037538682}
+  m_Center: {x: -0.006163618, y: 0.00010514945, z: 0.0014061457}
 --- !u!1 &538522710194942070
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,8 +883,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3057153137233330518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.055, z: 0}
-  m_LocalScale: {x: 1.8, y: 0.5, z: 1.8}
+  m_LocalPosition: {x: 0, y: 0.368, z: 0}
+  m_LocalScale: {x: 1.8, y: 0.08885, z: 1.8}
   m_Children: []
   m_Father: {fileID: 7507649457407056564}
   m_RootOrder: 0
@@ -886,7 +900,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3787164420190309054
