@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8b6a931fb936dc4d85362f97739cf34, type: 3}
-  m_Name: SlotNotAttached
+  m_Name: NonInteractableTrain
   m_EditorClassIdentifier: 
-  PlaySoundEffect: 0
+  PlaySoundEffect: 1
   soundEffect:
-    clip: {fileID: 0}
-    playFromOrigin: 0
-    volume: 1
+    clip: {fileID: 8300000, guid: ef09cc3c5d6743441ba3f11ee2326074, type: 3}
+    playFromOrigin: 1
+    volume: 0.6
     randomPitchRange: 0
   PlayVisualEffect: 0
   visualEffect:
@@ -32,37 +32,37 @@ MonoBehaviour:
     boolValue: 0
   PlayPulsingEffect: 1
   pulsingEffect:
-    LimitedPulsing: 0
-    duration: 0
+    LimitedPulsing: 1
+    duration: 1
     pulseCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 1
-        inSlope: 1.4661651
-        outSlope: 1.4661651
+        inSlope: -0.33981186
+        outSlope: -0.33981186
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.02229314
+        outWeight: 0.1044386
       - serializedVersion: 3
-        time: 0.45681474
-        value: 0.9447602
-        inSlope: -0.6593149
-        outSlope: -0.6593149
+        time: 0.27927095
+        value: 0.9999861
+        inSlope: 0.3979339
+        outSlope: 0.3979339
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.07074758
+        inWeight: 0.403208
+        outWeight: 0.13166545
       - serializedVersion: 3
-        time: 1
+        time: 0.5
         value: 1
-        inSlope: 1.4715657
-        outSlope: 1.4715657
+        inSlope: -0.28287256
+        outSlope: -0.28287256
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.04449811
+        inWeight: 0.16989152
         outWeight: 0
       m_PreInfinity: 1
       m_PostInfinity: 1
