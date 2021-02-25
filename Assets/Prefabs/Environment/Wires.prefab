@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3421424791316633547}
   - component: {fileID: 3413506433047265201}
   - component: {fileID: 3451294122849267719}
+  - component: {fileID: 9208152743801372383}
   m_Layer: 0
   m_Name: Wires
   m_TagString: Untagged
@@ -96,3 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4003396, y: 1.2160549, z: 1.1313715}
   m_Center: {x: 0.000000059604645, y: 0.572672, z: 0.00017431378}
+--- !u!114 &9208152743801372383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3389130131373063231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playEffect: 1
+  nonInteractable: {fileID: 11400000, guid: fb5c8ab00867062478333afadc92c6b3, type: 2}
+  playSound: 0
+  sound: {fileID: 0}
