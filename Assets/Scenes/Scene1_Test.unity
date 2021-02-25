@@ -778,6 +778,10 @@ PrefabInstance:
       propertyPath: defaultCursorSpeed
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2268683118442520979, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4825841944790863140, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_Name
       value: Sequence2
@@ -830,6 +834,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5043074862763430667, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_Size.x
       value: 2.1355789
@@ -856,6 +864,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204346684434737873, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8308139672587209399, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
