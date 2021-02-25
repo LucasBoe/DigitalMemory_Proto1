@@ -20,6 +20,9 @@ public class TextDisplayer : MonoBehaviour
     [SerializeField]
     TextData  closeupText;
 
+    [HideInInspector]
+    public bool HasCloseupText => closeupText != null;
+
     [Button]
     private void CreateNewCloseupText()
     {
