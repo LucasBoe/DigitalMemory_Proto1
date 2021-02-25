@@ -130,7 +130,7 @@ MonoBehaviour:
   after: {fileID: 0}
   StartDelay: 3
   StartReversedDelay: 3
-  TimeDots: 
+  TimeDots: 000000000300000006000000090000000b000000
 --- !u!95 &4825841944790863138
 Animator:
   serializedVersion: 3
