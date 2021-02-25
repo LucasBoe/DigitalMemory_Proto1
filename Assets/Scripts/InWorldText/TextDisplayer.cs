@@ -44,11 +44,13 @@ public class TextDisplayer : MonoBehaviour
         if (hoverable != null)
         {
             hoverable.OnStartHoverEvent += ShowHoverText;
+            hoverable.OnEndHoverEvent += HideAllTexts;
         }
 
         if (closeupable != null)
         {
             closeupable.OnStartCloseupEvent += ShowCloseupText;
+            closeupable.OnEndCloseupEvent += HideAllTexts;
         }
     }
 
@@ -60,23 +62,30 @@ public class TextDisplayer : MonoBehaviour
         if (hoverable != null)
         {
             hoverable.OnStartHoverEvent -= ShowHoverText;
+            hoverable.OnEndHoverEvent -= HideAllTexts;
         }
 
         if (closeupable != null)
         {
             closeupable.OnStartCloseupEvent -= ShowCloseupText;
+            closeupable.OnEndCloseupEvent -= HideAllTexts;
         }
     }
 
     private void ShowHoverText()
     {
         if (hoverText != null)
-            Debug.Log("HOVER SAYS: " + hoverText.text);
+            Game.TextDispayHandler.DisplayText(hoverText.text,transform);
     }
 
     private void ShowCloseupText ()
     {
         if (closeupText != null)
-            Debug.Log("CLOSEUP SAYS: " + closeupText.text);
+            Game.TextDispayHandler.DisplayText(closeupText.text, transform);
+    }
+
+    private void HideAllTexts()
+    {
+        Game.TextDispayHandler.ClearTexts();
     }
 }

@@ -6,23 +6,24 @@ using NaughtyAttributes;
 
 public class InfoTextBox : MonoBehaviour
 {
-    [ResizableTextArea] public string titleText;
+    //[ResizableTextArea] public string titleText;
     [ResizableTextArea] public string contentText;
     [SerializeField] int titleFontSize, contentFontSize;
+    [SerializeField] Quaternion rotation;
 
     [SerializeField] TextMeshPro titleBox, contentBox;
 
 
-    void Start()
+    public void Init(string text)
     {
-        UpdateTextAndFont(titleBox, titleText, titleFontSize);
+        contentText = text;
+        //UpdateTextAndFont(titleBox, titleText, titleFontSize);
         UpdateTextAndFont(contentBox, contentText, contentFontSize);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.rotation = rotation;
     }
 
     void UpdateTextAndFont(TextMeshPro box, string text, int fontsize) {
