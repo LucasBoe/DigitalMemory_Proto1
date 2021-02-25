@@ -20,6 +20,7 @@ public class Attacher : MonoBehaviour, IAttacher
     [SerializeField] protected bool isAttached;
     [SerializeField] Vector3 attachmentOffset;
     public event System.Action<bool, string> OnChangeAttached;
+    public bool IsAttached => isAttached;
 
     private void Start()
     {

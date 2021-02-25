@@ -19,6 +19,7 @@ public class IsAttachedConditioner : MonoBehaviour
     [SerializeField] [ShowIf("playEffectsOnlyAtTime")] float timeMaxToPlayEffects;
 
     Attacher attacher;
+    float timeBefore = float.MinValue;
     private void OnEnable()
     {
         attacher = GetComponent<Attacher>();
@@ -32,6 +33,8 @@ public class IsAttachedConditioner : MonoBehaviour
             Debug.LogWarning("No Attacher found.");
             Destroy(this);
         }
+
+        Game.TimeHandler.OnTimeUpdate += OnTimeUpdate;
     }
 
     private void OnDisable()
@@ -45,7 +48,18 @@ public class IsAttachedConditioner : MonoBehaviour
             Debug.LogWarning("No Attacher found.");
             Destroy(this);
         }
+
+        Game.TimeHandler.OnTimeUpdate -= OnTimeUpdate;
     }
+
+    private void OnTimeUpdate(float newTime)
+    {
+        if ((timeBefore < timeMinToPlayEffects || timeBefore > timeMaxToPlayEffects) && newTime > timeMinToPlayEffects && newTime < timeMaxToPlayEffects)
+            ChangedAttached(attacher.IsAttached,attacher.attachmentName);
+
+        timeBefore = newTime;
+    }
+
 
     void ChangedAttached(bool isAttached, string attachment)
     {
