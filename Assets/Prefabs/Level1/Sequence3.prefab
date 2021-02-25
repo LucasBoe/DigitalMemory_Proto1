@@ -58,9 +58,9 @@ MonoBehaviour:
   variableName: HouseSlotAttached
   checkForSpecificAttachment: 0
   specificAttachment: 
-  onAttachEffect: {fileID: 0}
-  onDetachEffect: {fileID: 0}
-  playEffectsOnlyAtTime: 0
+  onAttachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
   timeMinToPlayEffects: 0
   timeMaxToPlayEffects: 0
 --- !u!1 &6019594772035041710
