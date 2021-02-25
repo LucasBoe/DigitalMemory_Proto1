@@ -32,4 +32,10 @@ public class InfoTextBox : MonoBehaviour
         box.fontSize = fontsize;
 
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, 0.2f);
+    }
 }

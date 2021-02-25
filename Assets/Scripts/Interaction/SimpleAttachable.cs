@@ -14,6 +14,8 @@ public interface ICloseupable
 
     event Action OnStartCloseupEvent;
     event Action OnEndCloseupEvent;
+
+    bool ShouldOffset();
 }
 
 
@@ -126,5 +128,11 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
     public override bool IsDragable()
     {
         return base.IsDragable() && !isInCloseup;
+    }
+
+    public bool ShouldOffset()
+    {
+        TextDisplayer textDisplayer = GetComponent<TextDisplayer>();
+        return (textDisplayer != null && textDisplayer.HasCloseupText);
     }
 }
