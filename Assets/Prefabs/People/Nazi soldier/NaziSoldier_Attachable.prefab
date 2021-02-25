@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -6010431847430716802}
   - component: {fileID: 7689603629932331257}
   - component: {fileID: 4388295666994237137}
+  - component: {fileID: 4871212901964792177}
   m_Layer: 0
   m_Name: NaziSoldier_Attachable
   m_TagString: Untagged
@@ -193,6 +194,20 @@ CapsuleCollider:
   m_Height: 0.71
   m_Direction: 1
   m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!114 &4871212901964792177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4878755239481430201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4e57a8f378b5844beef60eb4c3d9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverText: {fileID: 11400000, guid: 7498bdf5c0c0f2f48ae5a66317a5e897, type: 2}
+  closeupText: {fileID: 11400000, guid: eba4164f4b774804a825d44353b9e45c, type: 2}
 --- !u!1001 &1012071663397167873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -321,6 +336,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 304839911238683249, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
     - {fileID: 4779974774629616289, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
+    - {fileID: 6919247762075480468, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
 --- !u!4 &7905275427099900470 stripped
 Transform:
