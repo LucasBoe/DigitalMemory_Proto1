@@ -1223,6 +1223,7 @@ MonoBehaviour:
   - {fileID: 996690511528024337}
   defaultCursorSpeed: 180
   resetCursorSpeed: 360
+  watchTick: {fileID: 8300000, guid: ceb090ba65424c443a3534314b256883, type: 3}
 --- !u!54 &7011348852482894634
 Rigidbody:
   m_ObjectHideFlags: 0

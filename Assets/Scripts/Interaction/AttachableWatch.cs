@@ -8,12 +8,14 @@ public class AttachableWatch : SimpleAttachable
     [SerializeField] Transform hourHand, minuteHand, face;
     [SerializeField] AttachableWatchHand hand;
     [SerializeField] GameObject[] dots;
-    float time, targetTime;
+    float time, timeLastTick, targetTime;
     bool moves = false;
     Sequence currentSequence;
 
     float cursorSpeed = 90f;
     [SerializeField] float defaultCursorSpeed = 90f, resetCursorSpeed = 180f;
+    [SerializeField] float watchTickIntervall = 1f;
+    [SerializeField] AudioClip watchTick;
 
     internal void TrySnapToClosestDot()
     {
@@ -111,6 +113,11 @@ public class AttachableWatch : SimpleAttachable
         if (moves)
         {
             time = Mathf.MoveTowardsAngle(time * 30f, targetTime * 30f, Time.deltaTime * cursorSpeed) / 30f;
+            if (Mathf.Abs(timeLastTick - time) > watchTickIntervall)
+            {
+                Game.SoundPlayer.Play(watchTick);
+                timeLastTick = time;
+            }
             Game.TimeHandler.MoveHand(time);
             SetVisualsForTime(time);
 
