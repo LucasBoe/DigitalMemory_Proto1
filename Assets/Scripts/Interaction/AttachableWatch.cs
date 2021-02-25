@@ -10,9 +10,32 @@ public class AttachableWatch : SimpleAttachable
     [SerializeField] GameObject[] dots;
     float time, targetTime;
     bool moves = false;
+    Sequence currentSequence;
 
     float cursorSpeed = 90f;
     [SerializeField] float defaultCursorSpeed = 90f, resetCursorSpeed = 180f;
+
+    internal void TrySnapToClosestDot()
+    {
+        if (currentSequence != null)
+        {
+
+            float closestTime = float.MinValue;
+            float closestTimeDifference = float.MaxValue;
+
+            foreach (int dot in currentSequence.TimeDots)
+            {
+                if (Mathf.Abs(dot - time) < closestTimeDifference)
+                {
+                    closestTime = dot;
+                    closestTimeDifference = Mathf.Abs(dot - time);
+                }
+            }
+
+            if (closestTimeDifference < 1)
+                targetTime = closestTime;
+        }
+    }
 
     private void OnEnable()
     {
@@ -30,6 +53,7 @@ public class AttachableWatch : SimpleAttachable
 
     private void OnStartNewSeqeunce(Sequence newSeqence)
     {
+        currentSequence = newSeqence;
         CreateNewTimeDots(newSeqence.TimeDots);
     }
 

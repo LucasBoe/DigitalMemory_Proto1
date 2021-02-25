@@ -16,6 +16,7 @@ public class AttachableWatchHand : MonoBehaviour, IDragable
     public void EndDrag(Vector3 position)
     {
         isDragging = false;
+        watch.TrySnapToClosestDot();
     }
 
     public float GetEndDragYOffset()
