@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8565749045572895892}
+  - component: {fileID: 8806364640644194391}
   - component: {fileID: 4884012857018327043}
   - component: {fileID: 4892289413700541469}
   - component: {fileID: 4779974774629616289}
@@ -21,8 +21,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8565749045572895892
-RectTransform:
+--- !u!4 &8806364640644194391
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35,11 +35,6 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &4884012857018327043
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,10 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nonInteractable: {fileID: 0}
-  shakeSpeed: 30
-  shakeAmount: 0.05
-  shakeDuration: 0.5
+  nonInteractable: {fileID: 11400000, guid: aa5ebfa335d9f7940bf5da66ba602c71, type: 2}
 --- !u!114 &6919247762075480468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,5 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4e57a8f378b5844beef60eb4c3d9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: {fileID: 0}
-  closeupText: {fileID: 0}
+  hoverText: {fileID: 11400000, guid: 7498bdf5c0c0f2f48ae5a66317a5e897, type: 2}
+  closeupText: {fileID: 11400000, guid: eba4164f4b774804a825d44353b9e45c, type: 2}

@@ -68,6 +68,23 @@ public class Game : MonoBehaviour
         }
     }
 
+    public static TextDispayHandler TextDispayHandler
+    {
+        get
+        {
+            return TextDispayHandler.GetInstance(usePrefab: true);
+        }
+    }
+
+
+    public static CameraController CameraController
+    {
+        get
+        {
+            return CameraController.GetInstance(usePrefab: true);
+        }
+    }
+
     public static MouseInteractor MouseInteractor
     {
         get

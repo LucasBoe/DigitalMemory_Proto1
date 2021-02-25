@@ -13,6 +13,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     Quaternion targetRotation;
 
     Vector2 mousePositionBefore;
+    bool offsetToTheLeftToMakeSpaceForInspectionText;
 
     [SerializeField] float closeupSpeed;
     [SerializeField] Transform closeupTransform;
@@ -20,6 +21,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     public void StartCloseup(ICloseupable currentCloseupable)
     {
         Debug.Log("start closeup");
+        offsetToTheLeftToMakeSpaceForInspectionText = currentCloseupable.ShouldOffset();
         Game.SoundPlayer.Play(startCloseupSound, randomPitchRange: 0.15f);
         Game.MouseInteractor.ForceEndHover();
         currentCloseupable.OnStartCloseup();
@@ -35,7 +37,7 @@ public class CloseupHandler : Singleton<CloseupHandler>
     }
     public void UpdateCloseup(ICloseupable currentCloseupable)
     {
-        targetPosition = closeupTransform.position;
+        targetPosition = closeupTransform.position - (offsetToTheLeftToMakeSpaceForInspectionText?closeupTransform.right:Vector3.zero);
 
         if (Input.GetMouseButton(0))
         {

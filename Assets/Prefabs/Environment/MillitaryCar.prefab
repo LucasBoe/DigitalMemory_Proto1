@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nonInteractable: {fileID: 8300000, guid: 49d67a6665714dc448127305cf15ec79, type: 3}
+  nonInteractable: {fileID: 0}
 --- !u!1 &6121119394661662522
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +318,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6118056116602845034}
+  - component: {fileID: 696563306700027881}
+  - component: {fileID: 585985579797963726}
   m_Layer: 0
   m_Name: MillitaryCar
   m_TagString: Untagged
@@ -344,6 +346,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696563306700027881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121150343028082762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonInteractable: {fileID: 11400000, guid: 3b7147b16c07d92468acf7e50ee9d2e0, type: 2}
+--- !u!65 &585985579797963726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121150343028082762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7482705, y: 1.2963448, z: 3.770822}
+  m_Center: {x: 0.011112928, y: 0.6149149, z: -0.27411914}
 --- !u!1 &6121413269545431762
 GameObject:
   m_ObjectHideFlags: 0
