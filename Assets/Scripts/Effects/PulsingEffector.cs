@@ -29,7 +29,7 @@ public class PulsingEffector : MonoBehaviour
     private void Update()
     {
         duration -= Time.deltaTime;
-        transform.localScale = Vector3.one * curve.Evaluate(Time.time);
+        transform.localScale = defaultScale * curve.Evaluate(Time.time);
 
         if (duration <= 0)
             Stop();
