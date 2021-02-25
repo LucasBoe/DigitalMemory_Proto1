@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c7c12741ae7754ab88aa6c23f169d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 6019594771186448174}
+  current: {fileID: 1323678898}
 --- !u!4 &25274985
 Transform:
   m_ObjectHideFlags: 0
@@ -613,10 +613,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sequence1
       objectReference: {fileID: 0}
-    - target: {fileID: 6246045633916946801, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6246045633916946804, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -660,14 +656,6 @@ PrefabInstance:
     - target: {fileID: 6246045633916946804, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426512786143358022, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
-      propertyPath: attachmentName
-      value: Jew
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426512786190862257, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
-      propertyPath: attachmentName
-      value: Jew
       objectReference: {fileID: 0}
     - target: {fileID: 8050476179646154137, guid: dd18260e206e139468866f4d4ac45db8, type: 3}
       propertyPath: after
@@ -786,14 +774,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
-    - target: {fileID: 1710804274, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: specificAttachment
-      value: Watch
-      objectReference: {fileID: 0}
-    - target: {fileID: 1710804274, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: checkForSpecificAttachment
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 482173094988779584, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: after
       value: 
@@ -802,37 +782,9 @@ PrefabInstance:
       propertyPath: before
       value: 
       objectReference: {fileID: 1323678898}
-    - target: {fileID: 482173094988779584, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: endTime
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 482173094988779584, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: maxTime
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1746197125771249768, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: attachEffect
-      value: 
-      objectReference: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
-    - target: {fileID: 1746197125771249768, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: resetCursorSpeed
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 1746197125771249768, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: defaultCursorSpeed
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268683118442520979, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4825841944790863140, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_Name
       value: Sequence2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4825841944790863140, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4825841944790863141, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
       propertyPath: m_RootOrder
@@ -878,48 +830,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5043074862763430667, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Size.x
-      value: 2.1355789
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Size.y
-      value: 0.4307825
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Size.z
-      value: 2.1684284
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Center.x
-      value: -0.07701409
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Center.y
-      value: 0.39039126
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_Center.z
-      value: -0.06084156
-      objectReference: {fileID: 0}
-    - target: {fileID: 5996133273807117996, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204346684434737873, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8308139672587209399, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
-      propertyPath: isAttached
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 360448968973184134, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c14bedf869abf447b12ebf07f83ab6e, type: 3}
 --- !u!114 &1366054377 stripped
 MonoBehaviour:
@@ -1362,22 +1273,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 167232818}
     m_Modifications:
-    - target: {fileID: 378614394176824771, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.17199963
-      objectReference: {fileID: 0}
-    - target: {fileID: 1126646100065834173, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.4239996
-      objectReference: {fileID: 0}
-    - target: {fileID: 2212673618140742149, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_Center.y
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 2212673618140742149, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6019594772035041705, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1426,24 +1321,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sequence3
       objectReference: {fileID: 0}
-    - target: {fileID: 6019594772035041710, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6963888878746999007, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965522660535170107, guid: 1347992d80b654649af838638180edd4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.492
-      objectReference: {fileID: 0}
     - target: {fileID: 6992843731831595327, guid: 1347992d80b654649af838638180edd4, type: 3}
       propertyPath: before
       value: 
       objectReference: {fileID: 1366054377}
-    m_RemovedComponents:
-    - {fileID: 6963888878746999007, guid: 1347992d80b654649af838638180edd4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1347992d80b654649af838638180edd4, type: 3}
 --- !u!114 &6019594771186448174 stripped
 MonoBehaviour:
