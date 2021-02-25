@@ -6,12 +6,17 @@ using UnityEngine.UIElements;
 
 public class NonInteractable : MonoBehaviour, IClickable
 {
+    [SerializeField] bool playEffect = true;
     [Expandable] [SerializeField] Effect nonInteractable;
+
+    [SerializeField] bool playSound = false;
+    [SerializeField] AudioClip sound;
 
     public void Click()
     {
-        Game.EffectHandler.Play(nonInteractable, gameObject);
-        //StartCoroutine(Shake());
+        if(playEffect) Game.EffectHandler.Play(nonInteractable, gameObject);
+
+        else if (playSound) Game.SoundPlayer.Play(sound);
 
     }
 

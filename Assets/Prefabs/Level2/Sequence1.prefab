@@ -129,6 +129,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: jew3Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &1367090182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: nazi4Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &2031261976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +171,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: nazi1Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &1584317746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +192,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: wagon1Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: -0.1
+  timeMaxToPlayEffects: 5
 --- !u!114 &845998913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +213,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: engineAttached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: -0.1
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &1421511118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +234,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: wagon2Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: -0.1
+  timeMaxToPlayEffects: 5
 --- !u!114 &1061856863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +255,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: wagon3Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: -0.1
+  timeMaxToPlayEffects: 5
 --- !u!114 &1443102328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +276,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: nazi3Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!1 &7520979292463453806
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,15 +344,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f5c8d035541414eb99f8399c8f8c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 9
-  endTime: 15
-  maxTime: 15
-  minTime: 6
-  startReversedTime: 12
+  startTime: 0
+  endTime: 9
+  maxTime: 9
+  minTime: -3
+  startReversedTime: 6
   before: {fileID: 0}
   after: {fileID: 0}
   StartDelay: 1
   StartReversedDelay: 1
+  TimeDots: 000000000600000007000000
 --- !u!95 &209786545
 Animator:
   serializedVersion: 3
@@ -363,6 +420,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: jew1Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &505226510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +441,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: jew2Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!114 &1294630768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +462,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 209786545}
   variableName: nazi2Attached
+  checkForSpecificAttachment: 0
+  specificAttachment: 
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 5.9
+  timeMaxToPlayEffects: 6.1
 --- !u!1001 &128067185396238430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.33
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -607,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalRotation.w
@@ -793,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684343188432486518, guid: 03356b3230103c944a920e64effebf4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.34
       objectReference: {fileID: 0}
     - target: {fileID: 2684343188432486518, guid: 03356b3230103c944a920e64effebf4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -801,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684343188432486518, guid: 03356b3230103c944a920e64effebf4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 2684343188432486518, guid: 03356b3230103c944a920e64effebf4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2331,7 +2409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.47
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2339,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.64
       objectReference: {fileID: 0}
     - target: {fileID: 4206226328316537202, guid: f4324383b1659ee4f8dd5ed70df37dad, type: 3}
       propertyPath: m_LocalRotation.w

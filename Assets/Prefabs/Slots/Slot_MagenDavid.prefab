@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4163108825560481377}
   - component: {fileID: 6402404973132055323}
   - component: {fileID: 3265945202263924685}
+  - component: {fileID: -6378770698833764515}
   m_Layer: 0
   m_Name: Slot_MagenDavid
   m_TagString: Untagged
@@ -113,3 +114,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5618363374731037446, guid: b53ea43f5273a5f49a0427d0234e1014, type: 3}
+--- !u!114 &-6378770698833764515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2505876177222950836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playEffect: 0
+  nonInteractable: {fileID: 0}
+  playSound: 1
+  sound: {fileID: 8300000, guid: b8100d638c7e1934ab7596b829653106, type: 3}
