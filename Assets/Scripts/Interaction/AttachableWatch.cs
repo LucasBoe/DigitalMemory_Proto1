@@ -7,7 +7,6 @@ public class AttachableWatch : SimpleAttachable
 {
     [SerializeField] Transform hourHand, minuteHand, face;
     [SerializeField] AttachableWatchHand hand;
-    [SerializeField] Effect timeResetEffect;
     [SerializeField] GameObject[] dots;
     float time, targetTime;
     bool moves = false;
@@ -49,7 +48,6 @@ public class AttachableWatch : SimpleAttachable
         targetTime = newTime;
         moves = true;
         cursorSpeed = resetCursorSpeed;
-        Game.EffectHandler.Play(timeResetEffect, gameObject);
         if (hand.IsDragging)
             Game.MouseInteractor.ForceEndDrag();
     }

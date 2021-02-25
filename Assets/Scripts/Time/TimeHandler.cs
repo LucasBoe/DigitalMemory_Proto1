@@ -10,6 +10,8 @@ public class TimeHandler : Singleton<TimeHandler>
     public float Time => time;
 
     [SerializeField] AudioClip rearrangeClip;
+    [Expandable]
+    [SerializeField] Effect resetEffect;
 
     public event System.Action<float> OnTimeUpdate;
     public event System.Action<float> OnTimeChange;
@@ -46,6 +48,7 @@ public class TimeHandler : Singleton<TimeHandler>
     {
         Debug.Log("Set Time to: " + newTime);
 
+        Game.EffectHandler.Play(resetEffect, gameObject);
         time = newTime;
         OnTimeUpdate?.Invoke(newTime);
         OnForceTimeReset?.Invoke(newTime);

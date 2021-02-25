@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlaySoundEffect: 1
   soundEffect:
-    clip: {fileID: 8300000, guid: ba7d2997eeb8e5b41995ce63494ec18b, type: 3}
+    clip: {fileID: 8300000, guid: edf78540625b39b4aa02d4ceab949e81, type: 3}
     playFromOrigin: 0
     volume: 1
     randomPitchRange: 0
@@ -24,6 +24,7 @@ MonoBehaviour:
     spawnRelativeToOrigin: 0
     spawnOffset: {x: 0, y: 0, z: 0}
     destroyDelay: 0
+  ClearVisualEffect: 0
   PlayChangeShaderEffect: 0
   changeShaderEffect:
     shader: {fileID: 0}
