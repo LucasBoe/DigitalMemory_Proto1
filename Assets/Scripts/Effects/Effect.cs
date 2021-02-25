@@ -80,12 +80,13 @@ public class SoundEffectData : EffectData
 {
     public AudioClip clip;
     public bool playFromOrigin;
+    public bool playOnlyIfFinished = false;
     public float volume = 1f;
     public float randomPitchRange = 0f;
 
     public override void PlayEffect(GameObject origin)
     {
-        Game.SoundPlayer.Play(clip, playFromOrigin ? origin : null, volume, randomPitchRange);
+        Game.SoundPlayer.Play(clip, playFromOrigin ? origin : null, volume, randomPitchRange, playOnlyIfFinished);
     }
 }
 
