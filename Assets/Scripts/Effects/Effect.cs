@@ -96,7 +96,7 @@ public class VisualEffectData : EffectData
     public Transform prefab;
     public bool spawnRelativeToOrigin;
     public Vector3 spawnOffset;
-    public float destroyDelay;
+    public float destroyDelay = -1f;
 
     public override void PlayEffect(GameObject origin)
     {
