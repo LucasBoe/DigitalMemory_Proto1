@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 925097557304239551}
   - component: {fileID: 1578859948594249444}
   - component: {fileID: 5185973874182900094}
+  - component: {fileID: 3943556058312812771}
   m_Layer: 0
   m_Name: Protagonist_Attachable
   m_TagString: Untagged
@@ -184,6 +185,20 @@ MonoBehaviour:
   attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
   detachEffect: {fileID: 0}
   potentialSlotEffect: {fileID: 11400000, guid: a9f1852fc5814e14b851615c0c903fcc, type: 2}
+--- !u!114 &3943556058312812771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566052087029226203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4e57a8f378b5844beef60eb4c3d9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverText: {fileID: 11400000, guid: 5592930cae9c69840b61f28adff5158b, type: 2}
+  closeupText: {fileID: 11400000, guid: edd8c6ec27ce3ab469e53c6bfc68a0f3, type: 2}
 --- !u!1001 &3687693301102884599
 PrefabInstance:
   m_ObjectHideFlags: 0
