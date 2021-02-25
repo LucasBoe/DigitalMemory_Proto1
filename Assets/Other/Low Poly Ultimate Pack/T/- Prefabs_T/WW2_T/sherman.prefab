@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012791040948}
+  - component: {fileID: 4179035507732397129}
+  - component: {fileID: 4388582304144419263}
   m_Layer: 0
   m_Name: sherman
   m_TagString: Untagged
@@ -45,6 +47,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4179035507732397129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011844863094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9688215, y: 2.1384346, z: 6.1841297}
+  m_Center: {x: 0.0066967607, y: 1.0781642, z: 0.0017604828}
+--- !u!114 &4388582304144419263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011844863094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonInteractable: {fileID: 11400000, guid: 3b7147b16c07d92468acf7e50ee9d2e0, type: 2}
 --- !u!1 &1152467060494366
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +452,7 @@ MeshCollider:
   m_GameObject: {fileID: 1236380074988628}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1096,7 +1124,7 @@ MeshCollider:
   m_GameObject: {fileID: 1674771888561802}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

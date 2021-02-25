@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5842524120702043680}
   - component: {fileID: 5852622734214165254}
   - component: {fileID: 5875528661113127344}
+  - component: {fileID: 6820317973667073479}
   m_Layer: 0
   m_Name: HouseWall2
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c276e78b38a7e4ac48a4e41bac87457c, type: 3}
+--- !u!114 &6820317973667073479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867998025459192080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonInteractable: {fileID: 11400000, guid: 6ed635eea07045e428f9fa2d7909571b, type: 2}
