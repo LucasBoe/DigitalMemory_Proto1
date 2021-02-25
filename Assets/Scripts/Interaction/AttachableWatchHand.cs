@@ -6,6 +6,10 @@ using UnityEngine.Rendering;
 public class AttachableWatchHand : MonoBehaviour, IDragable
 {
     [SerializeField] AttachableWatch watch;
+
+    [SerializeField] Transform pin;
+    [SerializeField] Vector3 pinLocalPositionIn, pinLocalPositionOut;
+
     float targetTime;
 
     bool moves = false;
@@ -16,6 +20,7 @@ public class AttachableWatchHand : MonoBehaviour, IDragable
     public void EndDrag(Vector3 position)
     {
         isDragging = false;
+        pin.transform.localPosition = pinLocalPositionIn;
         watch.TrySnapToClosestDot();
     }
 
@@ -32,6 +37,7 @@ public class AttachableWatchHand : MonoBehaviour, IDragable
     public void StartDrag()
     {
         isDragging = true;
+        pin.transform.localPosition = pinLocalPositionOut;
     }
 
     public void UpdateDragPosition(Vector3 point, Vector3 vector3)
