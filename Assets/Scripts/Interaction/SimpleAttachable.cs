@@ -49,7 +49,7 @@ public class SimpleAttachable : SimpleDragable, IAttachable, ICloseupable
         if (toAttachTo.ResetOrientationOnAttach())
             transform.localRotation = Quaternion.identity;
 
-        gameObject.layer = 0;
+        SetMouseRaycastable(true);
 
         Game.EffectHandler.Play(attachEffect, gameObject);
         Game.EffectHandler.StopOnAllPotentialAttachables(attachment);

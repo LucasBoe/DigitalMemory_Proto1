@@ -95,10 +95,9 @@ public class AttachableWatch : SimpleAttachable
 
     protected override void SetMouseRaycastable(bool raycastable)
     {
-        base.SetMouseRaycastable(raycastable);
         hourHand.gameObject.layer = raycastable ? 0 : Physics.IgnoreRaycastLayer;
         face.gameObject.layer = raycastable ? 0 : Physics.IgnoreRaycastLayer;
-
+        base.SetMouseRaycastable(raycastable);
     }
 
     internal void UpdateWatchTimeByHand(float targetTime)
