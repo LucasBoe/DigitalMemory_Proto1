@@ -16,7 +16,8 @@ public class Selfdestroy : MonoBehaviour
 
     public void DestroyDelayed(float delay)
     {
-        Invoke("Destroy",delay);
+        if (delay > 0f)
+            Invoke("Destroy",delay);
     }
 
     public void Destroy()
