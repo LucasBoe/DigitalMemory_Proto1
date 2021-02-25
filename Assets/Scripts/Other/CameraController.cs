@@ -7,6 +7,7 @@ using UnityEngine;
 public class CameraController : Singleton<CameraController>
 {
     [SerializeField] AnimationCurve xPosChangeByMouseX, zPosChangeByMouseY, xRotChangeByMouseX, zRotChangeByMouseY;
+
     [SerializeField] Transform lookAround;
     [SerializeField] AnimationCurve curveRotation;
     [SerializeField] Face current;
@@ -38,6 +39,10 @@ public class CameraController : Singleton<CameraController>
         }
     }
 
+    public Vector3 GetUpVector()
+    {
+        return transform.up;
+    }
 
     void Rotate(Face face)
     {
