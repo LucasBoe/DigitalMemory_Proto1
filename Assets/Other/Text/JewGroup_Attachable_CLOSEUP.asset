@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b805ac075a4018249905b237f4097b95, type: 3}
   m_Name: JewGroup_Attachable_CLOSEUP
   m_EditorClassIdentifier: 
-  text: How do I look in closeup mode?
+  text: "It is estimated that 1,800\u20132,000 prisoners perished at Klooga from
+    wanton killings, epidemics and working conditions. \n\nMost of them were Jews.\n\nAccording
+    to Soviet sources, approximately 2,000 were shot, then their bodies were stacked
+    onto wooden pyres and burned. On 22 September 1944, when Soviet troops reached
+    the Klooga camp, only 85 of the 2,400 prisoners remaining post-evacuation had
+    managed to survive by hiding inside the camp or escaping into the surrounding
+    forests."

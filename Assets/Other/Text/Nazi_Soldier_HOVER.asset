@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b805ac075a4018249905b237f4097b95, type: 3}
   m_Name: Nazi_Soldier_HOVER
   m_EditorClassIdentifier: 
-  text: Oh no! I'm a Nazi.
+  text: SS Soldier
