@@ -16,11 +16,11 @@ MonoBehaviour:
   variableName: FireSlotAttached
   checkForSpecificAttachment: 0
   specificAttachment: 
-  onAttachEffect: {fileID: 0}
-  onDetachEffect: {fileID: 0}
-  playEffectsOnlyAtTime: 0
-  timeMinToPlayEffects: 0
-  timeMaxToPlayEffects: 0
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
+  onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
+  playEffectsOnlyAtTime: 1
+  timeMinToPlayEffects: 4.5
+  timeMaxToPlayEffects: 8.5
 --- !u!114 &1296751561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   variableName: CenterSlotAttached
   checkForSpecificAttachment: 0
   specificAttachment: 
-  onAttachEffect: {fileID: 0}
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
   onDetachEffect: {fileID: 0}
   playEffectsOnlyAtTime: 0
   timeMinToPlayEffects: 0
@@ -58,11 +58,11 @@ MonoBehaviour:
   variableName: HouseSlotAttached
   checkForSpecificAttachment: 0
   specificAttachment: 
-  onAttachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+  onAttachEffect: {fileID: 11400000, guid: 6c48964acb8f0f34b93b2d8e1a281862, type: 2}
   onDetachEffect: {fileID: 11400000, guid: d5c3d39daafaa1b41991b9b9801d913b, type: 2}
   playEffectsOnlyAtTime: 1
-  timeMinToPlayEffects: 0
-  timeMaxToPlayEffects: 0
+  timeMinToPlayEffects: 0.5
+  timeMaxToPlayEffects: 2.5
 --- !u!1 &6019594772035041710
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,19 +258,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2344489939615927444, guid: ffe6b8fd55d473144b5d58a14e8908d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1511,6 +1511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5759086363907203257}
     m_Modifications:
+    - target: {fileID: 5185973874182900094, guid: d23d97cf96291e14bbc31c2fe9589877, type: 3}
+      propertyPath: attachEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
     - target: {fileID: 5185973874182900094, guid: d23d97cf96291e14bbc31c2fe9589877, type: 3}
       propertyPath: defaultParent
       value: 
