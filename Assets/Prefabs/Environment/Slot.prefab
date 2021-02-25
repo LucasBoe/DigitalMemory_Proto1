@@ -224,7 +224,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 1.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-3956784636791730512
 MonoBehaviour:
@@ -238,7 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playEffect: 0
   nonInteractable: {fileID: 11400000, guid: b6e39b6e20e6b43409e8bc8e935366e5, type: 2}
+  playSound: 1
+  sound: {fileID: 8300000, guid: b8100d638c7e1934ab7596b829653106, type: 3}
 --- !u!1001 &3291517180078802292
 PrefabInstance:
   m_ObjectHideFlags: 0

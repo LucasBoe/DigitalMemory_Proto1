@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3363664065575171901}
   - component: {fileID: 3355184912575780796}
   - component: {fileID: 1421457674135595939}
+  - component: {fileID: -4353225012299133618}
   m_Layer: 0
   m_Name: Slot_Universal
   m_TagString: Untagged
@@ -112,3 +113,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.66
   m_Center: {x: 0, y: 0.15858133, z: 0}
+--- !u!114 &-4353225012299133618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3868274137893246696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb119f3a51f31cb43a9748ecafcbe687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playEffect: 0
+  nonInteractable: {fileID: 0}
+  playSound: 1
+  sound: {fileID: 8300000, guid: b8100d638c7e1934ab7596b829653106, type: 3}

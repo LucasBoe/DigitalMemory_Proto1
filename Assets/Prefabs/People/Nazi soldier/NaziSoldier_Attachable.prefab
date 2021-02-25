@@ -115,7 +115,7 @@ Transform:
   m_Children:
   - {fileID: 684864548669981930}
   - {fileID: 73170948290462762}
-  - {fileID: 6069901988139427312}
+  - {fileID: 7905275427099900470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,6 +161,8 @@ MonoBehaviour:
   isAttached: 0
   defaultParent: {fileID: 0}
   attachEffect: {fileID: 11400000, guid: 9a991a6847eeea14e935738f47baadc6, type: 2}
+  detachEffect: {fileID: 0}
+  potentialSlotEffect: {fileID: 11400000, guid: a9f1852fc5814e14b851615c0c903fcc, type: 2}
 --- !u!54 &7689603629932331257
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -312,12 +314,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8806364640644194391, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 304839911238683249, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
     - {fileID: 4779974774629616289, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
---- !u!4 &6069901988139427312 stripped
+--- !u!4 &7905275427099900470 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4881845185123549073, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8806364640644194391, guid: bb5fe43a755544f4583161aa84f71a9a, type: 3}
   m_PrefabInstance: {fileID: 1694290134205307489}
   m_PrefabAsset: {fileID: 0}
