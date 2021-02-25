@@ -7,9 +7,12 @@ using System.Linq;
 public class SoundPlayer : Singleton<SoundPlayer>
 {
     List<PlayingAudio> currentlyPlaying = new List<PlayingAudio>();
-    public void Play(AudioClip clip, GameObject toPlayFrom = null, float volume = 1, float randomPitchRange = 0)
+    public void Play(AudioClip clip, GameObject toPlayFrom = null, float volume = 1, float randomPitchRange = 0, bool playOnlyIfFinished = false)
     {
         if (clip == null)
+            return;
+
+        if (playOnlyIfFinished && ClipIsBeingPlayed(clip))
             return;
 
         PlayingAudio newAudio = new PlayingAudio();
@@ -28,6 +31,16 @@ public class SoundPlayer : Singleton<SoundPlayer>
         newAudio.coroutine = StartCoroutine(WaitForEndOfClipRoutine(newAudio));
         currentlyPlaying.Add(newAudio);
 
+    }
+
+    private bool ClipIsBeingPlayed(AudioClip clip)
+    {
+        foreach (var playing in currentlyPlaying.Where(g => g.source.clip == clip))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     private void StopAllSoundsFromSource(GameObject toPlayFrom)
