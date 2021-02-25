@@ -11,6 +11,7 @@ public class AttachableWatchHand : MonoBehaviour, IDragable
     [SerializeField] Vector3 pinLocalPositionIn, pinLocalPositionOut;
 
     float targetTime;
+    float timeBefore;
 
     bool moves = false;
     bool isDragging = false;
@@ -48,6 +49,10 @@ public class AttachableWatchHand : MonoBehaviour, IDragable
         float angle = Mathf.Atan2((target.x - head.x) / 2, target.y - head.y) * Mathf.Rad2Deg; //-180 => 180
         targetTime = ((angle + 90f) / 30f + 12f) % 12f; //0 => 1;
 
-        watch.UpdateWatchTimeByHand(targetTime);
+        if (Mathf.Abs((targetTime) - (timeBefore)) < 6f)
+        {
+            watch.UpdateWatchTimeByHand(targetTime);
+            timeBefore = targetTime;
+        }
     }
 }
