@@ -16,6 +16,7 @@ MonoBehaviour:
   soundEffect:
     clip: {fileID: 8300000, guid: ef09cc3c5d6743441ba3f11ee2326074, type: 3}
     playFromOrigin: 1
+    playOnlyIfFinished: 1
     volume: 0.6
     randomPitchRange: 0
   PlayVisualEffect: 0
